@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import HomePage from './components/mainPages/HomePage';
+import UserPage from './components/mainPages/UserPage';
 
 class App extends Component {
-  state = { users: [] };
+  // state = { users: [] };
 
   componentDidMount() {
-    fetch('/users')
-      .then(res => res.json())
-      .then(users => this.setState({ users }));
+    /* the following is basic example for getting the backend, we will need to expand this to use axios and use mysql */
+    // fetch('/users')
+    //   .then(res => res.json())
+    //   .then(users => this.setState({ users }));
   }
 
   render() {
-    console.log(this.state);
-    console.log('akuna');
     return (
       <div className="App">
-        <h1>Users</h1>
-        {/* {this.state.users.map(user => (
-          <div key={user.id}>{user.username}</div>
-        ))} */}
+        <BrowserRouter basename="/todo">
+          <div>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/user" exact component={UserPage} />
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
