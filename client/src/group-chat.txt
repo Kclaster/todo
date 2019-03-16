@@ -1,3 +1,7 @@
-Login - kyle
+kyle - Login/ forms
 
-review and review Container - Patrick (populate: name, description, stars)
+Patrick - review and review Container (populate: name, description, stars)
+
+Renee - ToDoList and ToDoItem (populate items, and style)
+
+Mary - Footer
