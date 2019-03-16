@@ -4,7 +4,13 @@ import './style.css';
 
 class FormContainer extends React.Component {
   render() {
-    return <Form />;
+    return (
+      <div>
+        <Form />
+
+        <p>{this.props.client}</p>
+      </div>
+    );
   }
 }
 
