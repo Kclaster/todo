@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { getter } from '../../axios';
+import { getUser } from '../../axios';
 
 import GoogleLogin from 'react-google-login';
 import './style.css';
@@ -25,8 +25,15 @@ class SignIn extends Component {
   render() {
     const responseGoogle = response => {
       this.props.signIn(response.googleId);
-
-      getter();
+      console.log(response.googleId);
+      let user = {
+        id: response.googleId,
+        email: response.profileObj.email,
+        first_name: response.profileObj.givenName,
+        last_name: response.profileObj.familyName
+      };
+      //if exists, log id to redux, else post
+      getUser(user);
 
       //     ------ ANY INFORMATION THAT NEEDS TO BE SAVED FOR THE CLIENT NEEDS TO BE SAVED IN THEIR MYSQL ACCOUNT, then we pull it to add it to the website */
     };

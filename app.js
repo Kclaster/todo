@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+var connection = require('./config/connection');
+
 var app = express();
 
 // view engine setup
@@ -21,6 +23,36 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+//get the user with given id
+app.get('/user/:id', function(req, res) {
+  console.log(req.params);
+  connection.query(
+    'SELECT * FROM users_list WHERE user = ' + req.params.id,
+    function(req, results) {
+      if (results) {
+        res.json(results);
+      }
+    }
+  );
+});
+
+//post a new user
+app.post('/user', function(req, res) {
+  console.log(req.body);
+  console.log(req.body.email);
+  connection.query(
+    `INSERT INTO users_list(user, email, first_name, last_name)VALUE("${
+      req.body.id
+    }","${req.body.email}", "${req.body.first_name}", "${req.body.last_name}")`,
+    function(error, results, fields) {
+      if (error) throw error;
+      else {
+        console.log('post made');
+      }
+    }
+  );
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
