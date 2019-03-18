@@ -1,32 +1,16 @@
 var express = require('express');
 var router = express.Router();
+var connection = require('../config/connection');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  // Comment out this line:
-  //res.send('respond with a resource');
-
-  // And insert something like this instead:
-  res.json([
-    {
-      id: 1,
-      username: 'samsepi0l'
-    },
-    {
-      id: 2,
-      username: 'D0loresH4ze'
+//why isn't the route '/users'-- i think its because the app sends us to this so we are already in users...
+router.get('/', function(req, res) {
+  connection.query('SELECT * FROM users_list', function(req, results) {
+    if (results) {
+      console.log(results);
+      res.json(results);
     }
-  ]);
+  });
 });
 
 module.exports = router;
-
-// var express = require('express');
-// var router = express.Router();
-
-// /* GET users listing. */
-// router.get('/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
-
-// module.exports = router;
