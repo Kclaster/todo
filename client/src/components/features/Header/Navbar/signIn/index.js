@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import { getUser } from '../../axios';
+import { getUser } from '../../../axios';
 
 import GoogleLogin from 'react-google-login';
 import './style.css';
-import { signIn, signOut } from '../../../../redux/actions';
+import { signIn, signOut } from '../../../../../redux/actions';
 import { connect } from 'react-redux';
 
 class SignIn extends Component {
@@ -52,7 +52,16 @@ class SignIn extends Component {
             onFailure={responseGoogle}
           />
         </div>
-        <button onClick={() => this.logOut()}>Log Out</button>
+        <button
+          className={
+            !this.props.isSignedIn
+              ? 'google-login hidden'
+              : 'google-login block'
+          }
+          onClick={() => this.logOut()}
+        >
+          Log Out
+        </button>
       </div>
     );
   }

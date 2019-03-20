@@ -7,8 +7,6 @@ class FormContainer extends React.Component {
     return (
       <div>
         <Form />
-
-        <p>{this.props.client}</p>
       </div>
     );
   }

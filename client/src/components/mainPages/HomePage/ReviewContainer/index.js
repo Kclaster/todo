@@ -1,9 +1,9 @@
 import React from 'react';
-import Review from './Review';
+import './style.css';
 
 class ReviewContainer extends React.Component {
   render() {
-    return <div>bob</div>;
+    return <div className="review-container">bob</div>;
   }
 }
 

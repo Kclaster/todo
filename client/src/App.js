@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import HomePage from './components/mainPages/HomePage';
 import UserPage from './components/mainPages/UserPage';
+import './style.css';
 
 class App extends Component {
   // state = { users: [] };

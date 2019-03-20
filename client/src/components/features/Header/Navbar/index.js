@@ -6,11 +6,13 @@ import SignIn from './signIn';
 class NavBar extends React.Component {
   render() {
     return (
-      <div>
-        <div className="nav">
-          <button>HomePage</button>
-          <button>UserPage</button>
-        </div>
+      <div className="nav-container">
+        <a className="link" href="/user">
+          userpage
+        </a>
+        <a className="link" href="/">
+          home
+        </a>
         <SignIn />
       </div>
     );
