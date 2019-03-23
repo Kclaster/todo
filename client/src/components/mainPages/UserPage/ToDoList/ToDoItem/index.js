@@ -2,8 +2,12 @@ import React from 'react';
 import './style.css';
 
 class ToDoItem extends React.Component {
-  render() {
-    return <div>boom</div>;
+  render(props) {
+    return (
+      <div>
+        <h3 class="fto-do-item-chore">mow lawn</h3>
+      </div>
+    );
   }
 }
 

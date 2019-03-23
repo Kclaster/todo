@@ -1,0 +1,7 @@
+kyle - Login/ forms
+
+Patrick - review and review Container (populate: name, description, stars)
+
+Renee - ToDoList and ToDoItem (populate items, and style)
+
+Mary - Footer

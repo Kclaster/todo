@@ -3,7 +3,7 @@ import './style.css';
 
 class Form extends React.Component {
   render() {
-    return <div>boom</div>;
+    return <div />;
   }
 }
 

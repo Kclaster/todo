@@ -4,7 +4,11 @@ import './style.css';
 
 class FormContainer extends React.Component {
   render() {
-    return <Form />;
+    return (
+      <div>
+        <Form />
+      </div>
+    );
   }
 }
 
