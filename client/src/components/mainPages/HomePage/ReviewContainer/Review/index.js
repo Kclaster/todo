@@ -2,7 +2,9 @@ import React from 'react';
 
 class Review extends React.Component {
   render() {
-    return <div>boom</div>;
+    return <div>
+      <h1>TEST</h1>
+    </div>;
   }
 }
 
