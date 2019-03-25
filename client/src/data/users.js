@@ -6,7 +6,7 @@ export default [
     },
     {
         userName: "Patrick",
-        userRating: 3,
+        userRating: 3, 
         userReview: "Patrick was great to work with."
 
     },

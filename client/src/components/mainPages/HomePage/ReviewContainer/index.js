@@ -14,7 +14,7 @@ class ReviewContainer extends React.Component {
           description={cur.userReview}
         />
       })}
-    </div>;
+    </div>
   }
 }
 

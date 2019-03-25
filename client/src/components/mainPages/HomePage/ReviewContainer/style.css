@@ -1,6 +1,15 @@
 .review-container {
-  height: 50vh;
+  height: 80vh;
   width: 30vw;
   margin: 10% 10%;
   border: 1px solid black;
 }
+
+.review-container h1 {
+  text-align: center;
+}
+#about {
+  float: left;
+}
+
+
