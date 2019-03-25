@@ -5,7 +5,7 @@ class ToDoItem extends React.Component {
   render(props) {
     return (
       <div>
-        <h3 class="fto-do-item-chore">mow lawn</h3>
+        <h3 class="fto-do-item-chore">change</h3>
       </div>
     );
   }

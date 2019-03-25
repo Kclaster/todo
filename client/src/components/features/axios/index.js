@@ -1,16 +1,5 @@
 import axios from 'axios';
 
-export const getter = () =>
-  axios
-    .get('/users')
-    .then(function(response) {
-      console.log(response);
-      return response;
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-
 export const getUser = user =>
   axios
     .get(`/user/${user.id}`)
@@ -36,13 +25,20 @@ export const getUser = user =>
       console.log(error);
     });
 
-export const gettClient = bob =>
+export const addToDo = post => {
+  console.log(post.userid);
   axios
-    .get(`/user/${bob}`)
+    .post('/todos', {
+      userid: post.userid,
+      title: post.title,
+      description: post.description,
+      startingBid: post.startingBid,
+      minStar: post.minStar
+    })
     .then(function(response) {
       console.log(response);
-      return response;
     })
     .catch(function(error) {
       console.log(error);
     });
+};
