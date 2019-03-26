@@ -37,14 +37,44 @@ app.get('/user/:id', function(req, res) {
   );
 });
 
+//get the todos joined with userid
+app.get('/todos/:id', function(req, res) {
+  console.log(req.params.id);
+  connection.query(
+    ` SELECT * FROM todos WHERE userId = "${req.params.id}"`,
+    function(req, results) {
+      if (results) {
+        console.log(results);
+        return res.send(results);
+      }
+    }
+  );
+});
+
 //post a new user
 app.post('/user', function(req, res) {
-  console.log(req.body);
-  console.log(req.body.email);
   connection.query(
     `INSERT INTO users_list(user, email, first_name, last_name)VALUE("${
       req.body.id
     }","${req.body.email}", "${req.body.first_name}", "${req.body.last_name}")`,
+    function(error, results, fields) {
+      if (error) throw error;
+      else {
+        console.log('post made');
+      }
+    }
+  );
+});
+
+//post new toDo
+app.post('/todos', function(req, res) {
+  let startingBid = parseInt(req.body.startingBid);
+  connection.query(
+    `INSERT INTO todos(userId, description, title, startingBid, minStar)VALUE("${
+      req.body.userid
+    }","${req.body.description}", "${req.body.title}", "${startingBid}", "${
+      req.body.minStar
+    }")`,
     function(error, results, fields) {
       if (error) throw error;
       else {

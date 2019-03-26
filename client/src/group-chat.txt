@@ -1,4 +1,4 @@
-kyle - Login/ forms
+kyle - find out how to display posts
 
 Patrick - review and review Container (populate: name, description, stars)
 
