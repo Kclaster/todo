@@ -1,4 +1,5 @@
 import React from 'react';
+import materialize from 'materialize-css';
 import './style.css';
 import { addToDo } from '../../../features/axios';
 import { connect } from 'react-redux';
