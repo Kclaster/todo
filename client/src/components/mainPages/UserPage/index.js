@@ -6,6 +6,7 @@ import ToDoList from './ToDoList';
 import Header from '../../features/Header';
 import Sidebar from '../../features/Sidebar';
 import { connect } from 'react-redux';
+import Footer from '../../features/Footer';
 import './style.css';
 
 class UserPage extends React.Component {
@@ -51,6 +52,7 @@ class UserPage extends React.Component {
           </div>
           <ReviewContainer />
         </div>
+        <Footer/>
       </div>
     );
   }

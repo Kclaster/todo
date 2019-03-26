@@ -1,0 +1,25 @@
+
+.footer {
+    z-index: 9;
+    display:flexbox;
+    flex: wrap;
+    background: red;
+    height: 20vh;
+    width: 100vw;
+    justify-content: center;
+};
+
+h1{
+    flex-basis: auto;
+    color:red;
+    text-align: center;
+    
+};
+
+.githubIcon {
+    flex: wrap;
+    height: 50vh;
+    width: 50vw;
+   
+
+}

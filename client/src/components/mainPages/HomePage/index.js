@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../features/Footer';
 import FormContainer from './FormContainer';
 import ReviewContainer from './ReviewContainer';
 import Header from '../../features/Header';
@@ -8,6 +9,7 @@ import { connect } from 'react-redux';
 
 import pic from '../../../pictures/cleaning-starwars1.jpg';
 import './style.css';
+
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -61,6 +63,7 @@ class HomePage extends React.Component {
             <FormContainer />
             <ReviewContainer />
           </div>
+          <Footer />
         </div>
       </div>
     );
