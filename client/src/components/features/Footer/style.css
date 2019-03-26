@@ -1,25 +1,29 @@
 
 .footer {
     z-index: 9;
-    display:flexbox;
-    flex: wrap;
-    background: red;
+  
+    display: flex;
+  justify-content: center;
+    background:grey;
     height: 20vh;
     width: 100vw;
-    justify-content: center;
+   
 };
 
 h1{
-    flex-basis: auto;
+    margin: .25rem;
+    padding: .25rem;
     color:red;
     text-align: center;
     
 };
 
-.githubIcon {
-    flex: wrap;
-    height: 50vh;
-    width: 50vw;
+img, .githubIcon {
+  
+   margin: .25rem;
+   padding: .25rem;
+
+    
    
 
 }
