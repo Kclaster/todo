@@ -11,7 +11,8 @@ export const getUser = user =>
             id: user.id,
             email: user.email,
             first_name: user.first_name,
-            last_name: user.last_name
+            last_name: user.last_name,
+            star_review: user.star_review
           })
           .then(function(response) {
             console.log(response);
