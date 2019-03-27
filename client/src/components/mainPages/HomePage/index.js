@@ -61,7 +61,6 @@ class HomePage extends React.Component {
           >
             <FormContainer />
             <ReviewContainer />
-            <AboutContainer />
           </div>
         </div>
       </div>

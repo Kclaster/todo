@@ -1,0 +1,18 @@
+.userpage-review {
+    border: 1px solid black; 
+    position: absolute;
+    align-self: auto;
+    padding: 10px 10px;
+    display: flex;
+    flex-flow: wrap;
+
+}
+
+.userpage-review h1{
+    text-align: center;
+}
+
+.stars{
+display: flex;
+flex-direction: row-reverse;
+}

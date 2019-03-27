@@ -1,17 +1,19 @@
 import React from 'react';
+import Link from './Link';
+import './style.css'
 
 
-class Review extends React.Component {
 
-  render() {
-    return <div>
-       <div class="review">
-          <h1>{this.props.user}</h1>
-          <div class="rating">{this.props.rating}</div>
-          <p>{this.props.description}</p>
-        </div>
-    </div>;
-  }
+
+const Review = (props) => {
+return (
+    <div className="tile review-tile">
+      {props.users.map((user, index) => {
+        return <Link key={index} user={user} />
+      })}
+
+    </div>
+  )
 }
 
 export default Review;

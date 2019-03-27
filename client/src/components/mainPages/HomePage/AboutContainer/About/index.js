@@ -1,16 +1,14 @@
 import React from 'react';
 import './style.css';
 
-class About extends React.Component {
 
-  render() {
-    return <div>
-       <div class="about-container">
-       <h1>About TaskBidder</h1>
-       <p>Hello Lets try this out</p>
-     </div>
-    </div>;
-  }
+const About = (props) => {
+  const content = props.content
+  return (
+    <div className="tile about-tile">
+      <h1>{content.header}</h1>
+      <p>{content.text}</p>
+    </div>)
 }
 
 export default About;
