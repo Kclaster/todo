@@ -7,7 +7,11 @@ CREATE TABLE `users_list` (
   `email` varchar(40) NOT NULL,
   `first_name` varchar(20) NOT NULL,
   `last_name` varchar(20) NOT NULL,
+<<<<<<< HEAD
   `star_review` integer(5);
+=======
+  `star_review` integer(10),
+>>>>>>> 1d21c895a3f278206fe0f3e9e6b5f1f0c004627f
   PRIMARY KEY (`id`)
 );
 
@@ -15,11 +19,13 @@ INSERT INTO users_list(`user`, `email`, `first_name`, `last_name`)
 VALUE(1234, 'test@gmail.com', 'Testy', 'Testers')
 
 CREATE TABLE `todos` (
-  `id` varchar(60) NOT NULL,
+  `id` integer(40) NOT NULL AUTO_INCREMENT,
+  `userId` varchar(60) NOT NULL,
   `description` varchar(300) NOT NULL,
   `title` varchar(40) NOT NULL,
   `startingBid` integer(20) NOT NULL,
   `minStar` integer(20) NOT NULL,
+  `expiration` varchar(60) NOT NULL,
   PRIMARY KEY (`id`));
   
   INSERT INTO `todos`(`id`, `description`, `title`, `startingBid`, `minStar`)
