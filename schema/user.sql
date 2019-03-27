@@ -7,6 +7,7 @@ CREATE TABLE `users_list` (
   `email` varchar(40) NOT NULL,
   `first_name` varchar(20) NOT NULL,
   `last_name` varchar(20) NOT NULL,
+  `star_review` integer(5);
   PRIMARY KEY (`id`)
 );
 
