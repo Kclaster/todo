@@ -8,6 +8,7 @@ const MarketPlaceContainer = props => {
     : props.data.map(cur => {
         return (
           <MarketPlace
+            expiration={cur.expiration}
             userId={cur.userId}
             description={cur.description}
             startingBid={cur.startingBid}

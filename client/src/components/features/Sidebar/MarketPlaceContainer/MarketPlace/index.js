@@ -7,7 +7,8 @@ class MarketPlace extends React.Component {
   constructor() {
     super();
     this.state = {
-      showSnippet: false
+      showSnippet: false,
+      newBid: ''
     };
   }
 
@@ -17,16 +18,29 @@ class MarketPlace extends React.Component {
     });
   };
 
+  handleChange = e => {
+    e.preventDefault();
+    this.setState({
+      newBid: e.target.value
+    });
+  };
+
+  handleSubmit = () => {
+    //check if beats current bid, if it does, submit
+  };
+
   render() {
     return (
       <div className="marketplace">
         {this.state.showSnippet ? (
           <MarketPlaceSnippet
+            handleChange={this.handleChange}
             toggleSnippet={this.toogleSnippet}
             title={this.props.title}
             description={this.props.description}
             userId={this.props.userId}
             startingBid={this.props.startingBid}
+            expiration={this.props.expiration}
           />
         ) : (
           <MarketTitleLink

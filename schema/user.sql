@@ -15,11 +15,13 @@ INSERT INTO users_list(`user`, `email`, `first_name`, `last_name`)
 VALUE(1234, 'test@gmail.com', 'Testy', 'Testers')
 
 CREATE TABLE `todos` (
-  `id` varchar(60) NOT NULL,
+  `id` integer(40) NOT NULL AUTO_INCREMENT,
+  `userId` varchar(60) NOT NULL,
   `description` varchar(300) NOT NULL,
   `title` varchar(40) NOT NULL,
   `startingBid` integer(20) NOT NULL,
   `minStar` integer(20) NOT NULL,
+  `expiration` varchar(60) NOT NULL,
   PRIMARY KEY (`id`));
   
   INSERT INTO `todos`(`id`, `description`, `title`, `startingBid`, `minStar`)

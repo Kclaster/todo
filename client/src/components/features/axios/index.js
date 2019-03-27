@@ -27,14 +27,14 @@ export const getUser = user =>
     });
 
 export const addToDo = post => {
-  console.log(post.userid);
   axios
     .post('/todos', {
       userid: post.userid,
       title: post.title,
       description: post.description,
       startingBid: post.startingBid,
-      minStar: post.minStar
+      minStar: post.minStar,
+      expiredTime: post.expiredTime
     })
     .then(function(response) {
       console.log(response);
@@ -43,3 +43,5 @@ export const addToDo = post => {
       console.log(error);
     });
 };
+
+export const updateToDo = post => {};

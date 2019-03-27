@@ -8,11 +8,11 @@ var app = express();
 router.post('/', function(req, res) {
   let startingBid = parseInt(req.body.startingBid);
   connection.query(
-    `INSERT INTO todos(userId, description, title, startingBid, minStar)VALUE("${
+    `INSERT INTO todos(userId, description, title, startingBid, minStar, expiration)VALUE("${
       req.body.userid
     }","${req.body.description}", "${req.body.title}", "${startingBid}", "${
       req.body.minStar
-    }")`,
+    }", "${req.body.expiredTime}")`,
     function(error, results, fields) {
       if (error) throw error;
       else {

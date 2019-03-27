@@ -14,7 +14,7 @@ class SideBar extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/todos/minStar/1').then(response => {
+    axios.get('/todos/minStar/0').then(response => {
       this.setState({
         todos: [...this.state.todos, response.data]
       });

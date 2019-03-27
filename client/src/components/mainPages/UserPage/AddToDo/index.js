@@ -1,4 +1,6 @@
 import React from 'react';
+import Moment from 'react-moment';
+import moment from 'moment';
 import './style.css';
 import { addToDo } from '../../../features/axios';
 import { connect } from 'react-redux';
@@ -10,8 +12,10 @@ class AddToDo extends React.Component {
       description: '',
       title: '',
       startingBid: 0,
-      minStar: 0
+      minStar: 1,
+      expiredTime: ''
     };
+    this.timeRef = React.createRef();
   }
 
   handleChange = event => {
@@ -22,27 +26,34 @@ class AddToDo extends React.Component {
     });
   };
 
+  componentDidMount() {
+    this.setState({
+      expiredTime: moment().add(7, 'days')
+    });
+  }
+
   handleSubmit = event => {
     event.preventDefault();
-    console.log('akuna', this.props);
     let userid = this.props.userid;
-    let { description, title, startingBid, minStar } = this.state;
-    console.log('first', userid);
+    let { expiredTime, description, title, startingBid, minStar } = this.state;
     let post = {
       userid,
       description,
       title,
       startingBid,
-      minStar
+      minStar,
+      expiredTime
     };
 
     addToDo(post);
   };
 
   render() {
+    const date = new Date();
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+          <Moment ref={this.timeRef}>{date}</Moment>
           <div className="form-item">
             <label>Title</label>
             <input onChange={this.handleChange} name="title" type="text" />
