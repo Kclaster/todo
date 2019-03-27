@@ -1,6 +1,11 @@
 import React from 'react';
 import './style.css';
-import FormComponent from './star'
+// import PropTypes from 'prop-types';
+// import classNames from 'classnames';
+// import { withStyles } from '@material-ui/core/styles';
+// import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
+import ReactStars from 'react-stars'
 
 
 class ReviewLink extends React.Component {
@@ -12,7 +17,7 @@ class ReviewLink extends React.Component {
 
 
     this.state = {
-      value: 'Leave a review....'
+      value: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -27,33 +32,39 @@ class ReviewLink extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    let userid = this.props.userid;
+    let { userName, comments, stars, reviewed } = this.state;
+    let post = {
+      userName,
+      comments,
+      stars,
+      reviewed,
+    }
   }
+
+  
 
   render() {
     return (
-      <div className="userpage-review" >
+
+      <div className="userpage-review">
+      <h3>Leave a comment for.....</h3>
         <form onSubmit={this.handleSubmit}>
-          <h1>Leave a review</h1>
-          <label>
-           <h3>Comments:</h3>
-          <textarea rows="4" cols="50" value={this.state.value} onChange={this.handleChange} />
-          </label>
-          <div id="star-rating" className="stars">
-          {/* <FormComponent /> */}
-            <select>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-              <p>Star Rating:</p>
-          </div>
+          <TextField
+            id="outlined-multiline-flexible"
+            label="Leave a review"
+            multiline
+            rowsMax="6"
+            value={this.state.value}
+            onChange={this.handleChange}
+            margin="normal"
+            variant="outlined" />
+          <ReactStars count={5}
+            size={24} />
           <input type="submit" value="Submit" />
         </form>
       </div>
-
-    );
+    )
   }
 }
 
