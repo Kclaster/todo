@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../../features/Footer';
 import FormContainer from './FormContainer';
 import ReviewContainer from './ReviewContainer';
+import AboutContainer from './AboutContainer'
 import Header from '../../features/Header';
 import ScrollingQuotes from './ScrollingQuotes';
 import { setHeight } from '../../../redux/actions';
