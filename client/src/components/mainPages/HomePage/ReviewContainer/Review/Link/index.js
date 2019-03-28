@@ -14,7 +14,7 @@ import faker from 'faker';
 
 const Link = (props) => {
 
-  const user = props.user;
+  const {user} = props;
   return (
 <Card>
     <List >
@@ -23,11 +23,11 @@ const Link = (props) => {
         <Avatar alt="Remy Sharp" src={faker.image.avatar()}/>
       </ListItemAvatar>
       <ListItemText
-        primary={user.userName}
+        primary={user.first_name} 
         secondary={
           <React.Fragment>
             <Typography component="span" color="textPrimary">
-            {user.userRating}&#9733; &#9733;&#9733; &#9733;
+            {user.star_review}
             </Typography>
             {user.userReview}
           </React.Fragment>

@@ -5,19 +5,21 @@ import './style.css';
 // import { withStyles } from '@material-ui/core/styles';
 // import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
-import ReactStars from 'react-stars'
+import ReactStars from 'react-stars';
+import axios from 'axios';
+
 
 
 class ReviewLink extends React.Component {
+
+
   constructor(props) {
     super(props);
 
-    // fetch(window.location.origin + '/users')
-    //   .then(users => {
-
-
     this.state = {
-      value: ''
+      userId: '2',
+      name: '',
+      stars: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -25,31 +27,45 @@ class ReviewLink extends React.Component {
   }
 
 
-
   handleChange(event) {
-    this.setState({ value: event.target.value });
+    console.log(event);
+    const target = event.target.value;
+    const name = this.state.name + target
+    this.setState({
+      name: name
+    });
   }
 
   handleSubmit(event) {
-    event.preventDefault();
-    let userid = this.props.userid;
-    let { userName, comments, stars, reviewed } = this.state;
+    event.preventDefault(event);
+    let { userId, name, stars } = this.state;
+
     let post = {
-      userName,
-      comments,
+      userId,
+      name,
       stars,
-      reviewed,
+
     }
+
+
+    axios.post('/reviews', post)
+      .then(res => {
+        console.log("post to user" + res)
+      })
+      .catch(err =>{
+        console.log(err)
+      })
+
   }
 
-  
 
   render() {
+    console.log(this.state)
     return (
 
       <div className="userpage-review">
-      <h3>Leave a comment for.....</h3>
-        <form onSubmit={this.handleSubmit}>
+        <h3>Leave a comment for.....</h3>
+        <form onSubmit={this.handleSubmit} >
           <TextField
             id="outlined-multiline-flexible"
             label="Leave a review"
@@ -60,7 +76,7 @@ class ReviewLink extends React.Component {
             margin="normal"
             variant="outlined" />
           <ReactStars count={5}
-            size={24} />
+            size={24} value="0" stars={this.state.stars} />
           <input type="submit" value="Submit" />
         </form>
       </div>
