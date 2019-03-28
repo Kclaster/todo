@@ -5,14 +5,10 @@
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "axios": "^0.18.0",
-<<<<<<< HEAD
-    "materialize-css": "^1.0.0-rc.2",
-=======
     "faker": "^4.1.0",
     "materialize-css": "^1.0.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.23",
->>>>>>> beta
     "mysql": "^2.16.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
