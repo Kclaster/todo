@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
-import Mysql from 'mysql';
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
 });
 
