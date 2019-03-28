@@ -1,5 +1,6 @@
+DROP DATABASE IF EXISTS `users`;
 CREATE DATABASE `users`;
-USE users;
+USE `users`;
 
 CREATE TABLE `users_list` (
   `id` bigint(60) NOT NULL AUTO_INCREMENT,
@@ -12,7 +13,7 @@ CREATE TABLE `users_list` (
 );
 
 INSERT INTO users_list(`user`, `email`, `first_name`, `last_name`)
-VALUE(1234, 'test@gmail.com', 'Testy', 'Testers')
+VALUE(1234, 'test@gmail.com', 'Testy', 'Testers');
 
 CREATE TABLE `todos` (
   `id` integer(40) NOT NULL AUTO_INCREMENT,
@@ -24,8 +25,25 @@ CREATE TABLE `todos` (
   `expiration` varchar(60) NOT NULL,
   PRIMARY KEY (`id`));
   
-  INSERT INTO `todos`(`id`, `description`, `title`, `startingBid`, `minStar`)
-VALUES(1234, "only the front lawn", "mow lawn", 10, 3);
+  INSERT INTO `todos`
+(
+`userId`,
+`description`,
+`title`,
+`startingBid`,
+`minStar`,
+`expiration`)
+VALUES("userId", "only the front lawn", "mow lawn", 10, 3, "july 2");
+
+INSERT INTO `todos`
+(
+`userId`,
+`description`,
+`title`,
+`startingBid`,
+`minStar`,
+`expiration`)
+VALUES("userId", "only the front lawn", "fold laundry", 10, 3, "july 2");
 
 
 CREATE TABLE `market` (
