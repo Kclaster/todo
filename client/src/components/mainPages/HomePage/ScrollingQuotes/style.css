@@ -1,6 +1,9 @@
 .scrolling-quotes h3 {
-  color: white;
+  color: black;
   font-size: 32px;
+  text-align: center;
+  padding: 300px 100px 0 100px;
+  font-family: 'Indie Flower', cursive;
 }
 
 .scrolling-quotes {

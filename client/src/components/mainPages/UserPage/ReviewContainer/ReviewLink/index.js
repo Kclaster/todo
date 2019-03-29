@@ -10,6 +10,9 @@ import axios from 'axios';
 
 
 
+
+
+
 class ReviewLink extends React.Component {
 
 
@@ -19,11 +22,12 @@ class ReviewLink extends React.Component {
     this.state = {
       userId: '2',
       name: '',
-      stars: '',
+      stars: null,
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
 
@@ -32,14 +36,13 @@ class ReviewLink extends React.Component {
     const target = event.target.value;
     const name = this.state.name + target
     this.setState({
-      name: name
+      name: target,
     });
   }
 
   handleSubmit(event) {
     event.preventDefault(event);
     let { userId, name, stars } = this.state;
-
     let post = {
       userId,
       name,
@@ -48,7 +51,7 @@ class ReviewLink extends React.Component {
     }
 
 
-    axios.post('/reviews', post)
+    axios.post('/user/reviews', post)
       .then(res => {
         console.log("post to user" + res)
       })
@@ -57,6 +60,14 @@ class ReviewLink extends React.Component {
       })
 
   }
+
+  handleStarChange = stars =>{
+    this.setState({stars}, () => console.log(this.state.stars))
+  }
+
+ 
+
+  
 
 
   render() {
@@ -75,8 +86,8 @@ class ReviewLink extends React.Component {
             onChange={this.handleChange}
             margin="normal"
             variant="outlined" />
-          <ReactStars count={5}
-            size={24} value="0" stars={this.state.stars} />
+          <ReactStars onChange={(value) => this.handleStarChange(value)} count={5}
+            size={24} />
           <input type="submit" value="Submit" />
         </form>
       </div>

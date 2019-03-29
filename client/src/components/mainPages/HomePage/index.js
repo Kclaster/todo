@@ -8,7 +8,7 @@ import ScrollingQuotes from './ScrollingQuotes';
 import { setHeight } from '../../../redux/actions';
 import { connect } from 'react-redux';
 
-import pic from '../../../pictures/cleaning-starwars1.jpg';
+import pic from '../../../pictures/agenda-blank-checklist-3299.jpg';
 import './style.css';
 
 
