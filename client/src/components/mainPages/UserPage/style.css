@@ -4,4 +4,8 @@
 
 .userpage-body {
   display: flex;
+  display: flex;
+  float: left;
 }
+
+

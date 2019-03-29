@@ -17,13 +17,22 @@ class UserPage extends React.Component {
     };
   }
 
-  //////////aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  //////////this axios call needs to find all of the user's todos push those to state, then get all todos that the user won the bid on and push that to state
   componentDidMount() {
-    axios.get(`/todos/${this.props.userId}`).then(result => {
-      this.setState({
-        list: [...this.state.list, result.data]
+    axios
+      .get(`/todos/${this.props.userId}`)
+      .then(result => {
+        this.setState({
+          list: [...this.state.list, ...result.data]
+        });
+      })
+      .then(() => {
+        axios.get(`/todos/market/${this.props.userId}`).then(result => {
+          this.setState({
+            list: [...this.state.list, ...result.data]
+          });
+        });
       });
-    });
   }
   // console.log(getTodos(this.props.userId));
   // try {
@@ -39,8 +48,9 @@ class UserPage extends React.Component {
   // }
 
   render() {
+    console.log(this.state);
     return (
-      <div>
+      <div className="todo">
         <Header />
         <div className="body">
           <Sidebar />
