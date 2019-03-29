@@ -18,7 +18,7 @@ const MarketPlaceContainer = props => {
       });
 
   return (
-    <div>
+    <div className="scrollingConatiner">
       <ul>{displayLinks}</ul>
     </div>
   );
