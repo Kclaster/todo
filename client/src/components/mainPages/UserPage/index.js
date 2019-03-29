@@ -40,7 +40,7 @@ class UserPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="todo">
         <Header />
         <div className="body">
           <Sidebar />

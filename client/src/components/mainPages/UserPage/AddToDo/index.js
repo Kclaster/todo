@@ -4,6 +4,10 @@ import moment from 'moment';
 import './style.css';
 import { addToDo, addToMarket } from '../../../features/axios';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import Input from '@material-ui/core/Input';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 class AddToDo extends React.Component {
   constructor() {
@@ -67,28 +71,37 @@ class AddToDo extends React.Component {
     console.log(this.state);
     const date = new Date();
     return (
-      <div>
-        <form>
+      <div className="todo-container">
+        <form >
+      <div clasName ="form-container">
           <Moment ref={this.timeRef}>{date}</Moment>
           <div className="form-item">
-            <label>Title</label>
-            <input onChange={this.handleChange} name="title" type="text" />
+
+            <Input placeholder="Title" onChange={this.handleChange} name="title" type="text" />
           </div>
           <div className="form-item">
-            <label>Description</label>
-            <input
+            <Input
+              placeholder="Description"
               onChange={this.handleChange}
               name="description"
               type="text"
             />
           </div>
           <div className="form-item">
-            <label>Starting Bid</label>
-            <input
-              onChange={this.handleChange}
-              name="startingBid"
-              type="number"
-            />
+
+        <TextField
+          id="outlined-number"
+          label="Starting Bid"
+          value={this.state.age}
+          onChange={this.handleChange}
+          name="startingBid"
+          type="number"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          margin="normal"
+          variant="outlined"
+        />
           </div>
           <div className="form-item">
             <label>Minimum Stars to Bid</label>
@@ -100,22 +113,25 @@ class AddToDo extends React.Component {
               <option value="5">5</option>
             </select>
           </div>
-          <button
+          <Button
+            variant="contained"
             onClick={this.handleSubmit}
             className="submit-btn"
             type="submit"
             value="Add to My Todos"
           >
             Add to My Todos
-          </button>
-          <button
+          </Button>
+          <Button
+            variant="contained"
             onClick={this.handleMarketSubmit}
             className="submit-btn"
             type="submit"
             value="Add to MarketPlace"
           >
             Add to MarketPlace
-          </button>
+          </Button>
+        </div>
         </form>
       </div>
     );

@@ -46,17 +46,28 @@ router.get('/', function(req, res) {
 
 router.post('/reviews', function(req, res) {
   connection.query(
-    `INSERT INTO reviews(userId, review, stars )VALUE("
-    ${req.body.userId}","${req.body.name}", "${req.body.stars}"`,
+    'INSERT INTO users.reviews(userId, review, stars )VALUES(?, ?, ?)', 
+      [req.body.userId,req.body.name, req.body.stars],
     function(error, results) {
-
       if (error) throw error;
       else {
         console.log('post made' );
+        res.status(200).send();
       }
     }
   );
-  res.json("Hello")
+});
+
+router.get('/reviews', function(req, res) {
+  console.log(req.params);
+  connection.query(
+    'SELECT * FROM reviews',
+    function(req, results) {
+      if (results) {
+        res.json(results);
+      }
+    }
+  );
 });
 
 module.exports = router;
