@@ -3,6 +3,7 @@ import FormContainer from './FormContainer';
 import ReviewContainer from './ReviewContainer';
 import AboutContainer from './AboutContainer'
 import Header from '../../features/Header';
+import Footer from '../../features/Footer';
 import ScrollingQuotes from './ScrollingQuotes';
 import { setHeight } from '../../../redux/actions';
 import { connect } from 'react-redux';
@@ -63,6 +64,7 @@ class HomePage extends React.Component {
             <ReviewContainer />
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

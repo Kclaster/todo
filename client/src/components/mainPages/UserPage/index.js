@@ -4,6 +4,7 @@ import AddToDo from './AddToDo';
 import ReviewContainer from './ReviewContainer';
 import ToDoList from './ToDoList';
 import Header from '../../features/Header';
+import Footer from '../../features/Footer';
 import Sidebar from '../../features/Sidebar';
 import { connect } from 'react-redux';
 import './style.css';
