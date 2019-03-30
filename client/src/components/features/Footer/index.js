@@ -1,5 +1,5 @@
 import React from 'react';
-import coolpic from '../../../pictures/githubicon.png';
+import coolpic from '../../../pictures/githubIcon';
 import './style.css';
 
 class Footer extends React.Component {
