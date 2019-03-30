@@ -18,6 +18,7 @@ class SideBar extends React.Component {
   }
 
   componentDidMount() {
+    console.log(this.props.userId);
     axios
       .get(`/user/${this.props.userId}`)
       .then(response => {
@@ -25,7 +26,8 @@ class SideBar extends React.Component {
           currentUser: [...this.state.currentUser, ...response.data]
         });
       })
-      .then(() =>
+      .then(() => {
+        console.log(this.state);
         axios
           .get(`/todos/minStar/${this.state.currentUser[0].star_review}`)
           .then(response => {
@@ -33,14 +35,15 @@ class SideBar extends React.Component {
               marketplace: [...this.state.marketplace, ...response.data]
             });
           })
+
           .then(() => {
             this.state.marketplace.forEach(cur => {
               if (moment(this.state.todaysDate).isAfter(cur.expiration_date)) {
                 axios.put(`todos/expired/${cur.taskId}`);
               }
             });
-          })
-      );
+          });
+      });
   }
 
   toggleSidebar = () => {

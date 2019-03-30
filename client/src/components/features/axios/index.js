@@ -4,10 +4,10 @@ export const getUser = user =>
   axios
     .get(`/user/${user.id}`)
     .then(function(response) {
-      console.log(response);
+      console.log(response.data.length);
       if (response.data.length === 0) {
         axios
-          .post('/user', {
+          .post('/user/login', {
             id: user.id,
             email: user.email,
             first_name: user.first_name,

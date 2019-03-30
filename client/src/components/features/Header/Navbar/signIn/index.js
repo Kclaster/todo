@@ -30,7 +30,7 @@ class SignIn extends Component {
         email: response.profileObj.email,
         first_name: response.profileObj.givenName,
         last_name: response.profileObj.familyName,
-        star_review: 2
+        star_review: 5
       };
       //if exists, log id to redux, else post
       getUser(user);
