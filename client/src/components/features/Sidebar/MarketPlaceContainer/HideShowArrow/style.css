@@ -9,12 +9,12 @@
 
 .right-arrow {
   transform: rotate(-135deg);
-  right: 4vw;
+  right: 2vw;
 }
 
 .left-arrow {
   transform: rotate(45deg);
-  right: 33vw;
+  right: 42vw;
 }
 
 .arrow:hover {

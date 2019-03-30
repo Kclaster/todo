@@ -3,6 +3,11 @@ import HomePage from './components/mainPages/HomePage';
 import UserPage from './components/mainPages/UserPage';
 import './style.css';
 import { connect } from 'react-redux';
+import { 
+  Button,
+  Container,
+  Row,
+  Col } from 'reactstrap';
 
 class App extends Component {
   // state = { users: [] };

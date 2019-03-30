@@ -59,7 +59,7 @@ class SideBar extends React.Component {
           showSideBar={showSideBar}
           toggleSidebar={this.toggleSidebar}
         />
-        <div class={`sidebar-container ${showSideBar ? 'show' : 'hide'}`}>
+        <div className={`sidebar-container ${showSideBar ? 'show' : 'hide'}`}>
           <h1 id="market-header">Market Place</h1>
           <MarketPlaceContainer data={this.state.marketplace} />
         </div>

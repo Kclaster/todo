@@ -40,7 +40,7 @@ const ToDoItem =(props) => {
   return (
     <div>
       <List >
-        <h3 class="to-do-item-chore">{props.title}</h3>
+        <h3 className="to-do-item-chore">{props.title}</h3>
         <ListItemSecondaryAction>
 
           <Button 
