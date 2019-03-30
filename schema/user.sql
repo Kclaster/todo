@@ -57,3 +57,15 @@ CREATE TABLE `market` (
   `title` varchar(40) NOT NULL,
   `minStar` int(20) NOT NULL,
   PRIMARY KEY (`taskId`));
+
+    INSERT INTO `users`.`market`
+(
+`userId`,
+`best_bid`,
+`best_bidderId`,
+`expired`,
+`expiration_date`,
+`description`,
+`title`,
+`minStar`)
+VALUES("hello",20, "3", false, "2019-04-03T22:07:43.137Z", "mowing the lawn", "Lawn stuff", 3)
