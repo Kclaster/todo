@@ -54,7 +54,7 @@ class UserPage extends React.Component {
         <Header />
         <div className="body">
           <Sidebar />
-          <div class=".userpage-body">
+          <div className=".userpage-body">
             <ToDoList />
             <AddToDo />
           </div>

@@ -7,7 +7,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Moment from 'react-moment';
-import moment from 'moment';
+// import moment from 'moment';
 
 class MarketPlaceSnippet extends React.Component {
   constructor(props) {
