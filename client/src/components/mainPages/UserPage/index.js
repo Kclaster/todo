@@ -4,6 +4,7 @@ import AddToDo from './AddToDo';
 import ReviewContainer from './ReviewContainer';
 import ToDoList from './ToDoList';
 import Header from '../../features/Header';
+import Footer from '../../features/Footer';
 import Sidebar from '../../features/Sidebar';
 import { connect } from 'react-redux';
 import './style.css';
@@ -54,7 +55,7 @@ class UserPage extends React.Component {
         <Header />
         <div className="body">
           <Sidebar />
-          <div class=".userpage-body">
+          <div className=".userpage-body">
             <ToDoList />
             <AddToDo />
           </div>

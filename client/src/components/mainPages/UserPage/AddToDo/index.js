@@ -89,7 +89,7 @@ class AddToDo extends React.Component {
     return (
       <div className="todo-container">
         <form>
-          <div clasName="form-container">
+          <div className="form-container">
             <Moment ref={this.timeRef}>{date}</Moment>
             <div className="form-item">
               <Input

@@ -5,7 +5,7 @@ const HideShowArrow = props => {
   return (
     <div
       onClick={props.toggleSidebar}
-      class={`arrow ${props.showSideBar ? 'left-arrow' : 'right-arrow'}`}
+      className={`arrow ${props.showSideBar ? 'left-arrow' : 'right-arrow'}`}
     />
   );
 };
