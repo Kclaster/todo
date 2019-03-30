@@ -58,6 +58,36 @@ router.get('/market/:id', function(req, res) {
   );
 });
 
+//update mysql on new best bid
+router.put('/market', function(req, res) {
+  let startingBid = parseInt(req.body.startingBid);
+  connection.query(
+    `UPDATE market SET best_bid = ${req.body.best_bid}, best_bidderId = "${
+      req.body.best_bidderId
+    }"  WHERE taskId = ${req.body.taskId}`,
+    function(error, results, fields) {
+      if (error) throw error;
+      else {
+        console.log('item updated');
+      }
+    }
+  );
+});
+
+//update todo when the bidding is expired
+router.put('/expired/:id', function(req, res) {
+  let startingBid = parseInt(req.body.startingBid);
+  connection.query(
+    `UPDATE market SET expired = 1 WHERE taskId = ${req.params.taskId}`,
+    function(error, results, fields) {
+      if (error) throw error;
+      else {
+        console.log('item updated');
+      }
+    }
+  );
+});
+
 router.post('/market', function(req, res) {
   let startingBid = parseInt(req.body.startingBid);
   connection.query(

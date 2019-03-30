@@ -30,9 +30,11 @@ class AddToDo extends React.Component {
     });
   };
 
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////moment
   componentDidMount() {
+    const date = new Date();
     this.setState({
-      expiredTime: moment().add(7, 'days')
+      expiredTime: moment(date, 'DD-MM-YYYY').add(7, 'days')
     });
   }
 

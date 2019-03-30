@@ -41,6 +41,7 @@ class MarketPlace extends React.Component {
             userId={this.props.userId}
             startingBid={this.props.startingBid}
             expiration={this.props.expiration}
+            taskId={this.props.taskId}
           />
         ) : (
           <MarketTitleLink
