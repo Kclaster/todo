@@ -5,10 +5,14 @@ var connection = mysql.createConnection({
   port: 3306,
   user: 'root',
 <<<<<<< HEAD
+<<<<<<< HEAD
   password: 'Diddy666',
 =======
   password: 'password',
 >>>>>>> 61e43a84969c6ed42ba342762b18feaf0c0b2f76
+=======
+  password: '1213',
+>>>>>>> ad7b992f731cab5218d4ef86fa17525d896fa484
   database: 'users'
 });
 

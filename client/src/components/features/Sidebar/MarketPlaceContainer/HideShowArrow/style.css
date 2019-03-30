@@ -5,15 +5,16 @@
   border-right: 1px solid grey;
   position: fixed;
   top: 50%;
-  right: 33vw;
 }
 
 .right-arrow {
   transform: rotate(-135deg);
+  right: 4vw;
 }
 
 .left-arrow {
   transform: rotate(45deg);
+  right: 33vw;
 }
 
 .arrow:hover {

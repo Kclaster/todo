@@ -49,6 +49,13 @@ class AddToDo extends React.Component {
       expiredTime
     };
     addToMarket(post);
+    this.setState({
+      description: '',
+      title: '',
+      startingBid: 0,
+      minStar: 1,
+      expiredTime: ''
+    });
   };
 
   handleSubmit = event => {
@@ -65,6 +72,13 @@ class AddToDo extends React.Component {
     };
 
     addToDo(post);
+    this.setState({
+      description: '',
+      title: '',
+      startingBid: 0,
+      minStar: 1,
+      expiredTime: ''
+    });
   };
 
   render() {
@@ -72,66 +86,76 @@ class AddToDo extends React.Component {
     const date = new Date();
     return (
       <div className="todo-container">
-        <form >
-      <div clasName ="form-container">
-          <Moment ref={this.timeRef}>{date}</Moment>
-          <div className="form-item">
-
-            <Input placeholder="Title" onChange={this.handleChange} name="title" type="text" />
+        <form>
+          <div clasName="form-container">
+            <Moment ref={this.timeRef}>{date}</Moment>
+            <div className="form-item">
+              <Input
+                placeholder="Title"
+                onChange={this.handleChange}
+                name="title"
+                type="text"
+                value={this.state.title}
+              />
+            </div>
+            <div className="form-item">
+              <Input
+                placeholder="Description"
+                onChange={this.handleChange}
+                name="description"
+                type="text"
+                value={this.state.description}
+              />
+            </div>
+            <div className="form-item">
+              <TextField
+                id="outlined-number"
+                label="Starting Bid"
+                value={this.state.age}
+                onChange={this.handleChange}
+                name="startingBid"
+                type="number"
+                value={this.state.startingBid}
+                InputLabelProps={{
+                  shrink: true
+                }}
+                margin="normal"
+                variant="outlined"
+              />
+            </div>
+            <div className="form-item">
+              <label>Minimum Stars to Bid</label>
+              <select
+                value={this.state.minStar}
+                onChange={this.handleChange}
+                name="minStar"
+              >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <Button
+              variant="contained"
+              onClick={this.handleSubmit}
+              className="submit-btn"
+              type="submit"
+              value="Add to My Todos"
+            >
+              Add to My Todos
+            </Button>
+            <Button
+              variant="contained"
+              onClick={this.handleMarketSubmit}
+              className="submit-btn"
+              type="submit"
+              value="Add to MarketPlace"
+            >
+              Add to MarketPlace
+            </Button>
           </div>
-          <div className="form-item">
-            <Input
-              placeholder="Description"
-              onChange={this.handleChange}
-              name="description"
-              type="text"
-            />
-          </div>
-          <div className="form-item">
-
-        <TextField
-          id="outlined-number"
-          label="Starting Bid"
-          value={this.state.age}
-          onChange={this.handleChange}
-          name="startingBid"
-          type="number"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          margin="normal"
-          variant="outlined"
-        />
-          </div>
-          <div className="form-item">
-            <label>Minimum Stars to Bid</label>
-            <select onChange={this.handleChange} name="minStar">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-          <Button
-            variant="contained"
-            onClick={this.handleSubmit}
-            className="submit-btn"
-            type="submit"
-            value="Add to My Todos"
-          >
-            Add to My Todos
-          </Button>
-          <Button
-            variant="contained"
-            onClick={this.handleMarketSubmit}
-            className="submit-btn"
-            type="submit"
-            value="Add to MarketPlace"
-          >
-            Add to MarketPlace
-          </Button>
-        </div>
         </form>
       </div>
     );

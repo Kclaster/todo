@@ -23,12 +23,11 @@ router.post('/', function(req, res) {
 });
 
 router.get('/minStar/:minstar', function(req, res) {
-  console.log(req.params.minstar);
   connection.query(
-    ` SELECT * FROM todos WHERE minStar >= "${req.params.minstar}"`,
+    ` SELECT * FROM market WHERE minStar <= "${req.params.minstar}"`,
     function(req, results) {
       if (results) {
-        console.log(results);
+        // console.log(results);
         return res.send(results);
       }
     }
@@ -46,8 +45,20 @@ router.get('/:id', function(req, res) {
   );
 });
 
+router.get('/market/:id', function(req, res) {
+  connection.query(
+    ` SELECT * FROM market WHERE best_bidderId = "${
+      req.params.id
+    }" AND expired = 1`,
+    function(req, results) {
+      if (results) {
+        return res.send(results);
+      }
+    }
+  );
+});
+
 router.post('/market', function(req, res) {
-  console.log('america');
   let startingBid = parseInt(req.body.startingBid);
   connection.query(
     `INSERT INTO market(userId, description, title, best_bid, minStar, expiration_date)VALUE("${

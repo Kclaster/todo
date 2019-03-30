@@ -25,7 +25,6 @@ class SignIn extends Component {
   render() {
     const responseGoogle = response => {
       this.props.signIn(response.googleId);
-      console.log(response.googleId);
       let user = {
         id: response.googleId,
         email: response.profileObj.email,

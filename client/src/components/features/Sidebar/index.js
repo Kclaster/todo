@@ -1,6 +1,7 @@
 import React from 'react';
 import MarketPlaceContainer from './MarketPlaceContainer';
 import HideShowArrow from './MarketPlaceContainer/HideShowArrow';
+import { connect } from 'react-redux';
 import axios from 'axios';
 import './style.css';
 
@@ -9,16 +10,28 @@ class SideBar extends React.Component {
     super();
     this.state = {
       showSideBar: false,
-      todos: []
+      marketplace: [],
+      currentUser: []
     };
   }
 
   componentDidMount() {
-    axios.get('/todos/minStar/0').then(response => {
-      this.setState({
-        todos: [...this.state.todos, response.data]
-      });
-    });
+    axios
+      .get(`/user/bob`)
+      .then(response => {
+        this.setState({
+          currentUser: [...this.state.currentUser, ...response.data]
+        });
+      })
+      .then(() =>
+        axios
+          .get(`/todos/minStar/${this.state.currentUser[0].star_review}`)
+          .then(response => {
+            this.setState({
+              marketplace: [...this.state.marketplace, response.data]
+            });
+          })
+      );
   }
 
   toggleSidebar = () => {
@@ -32,16 +45,22 @@ class SideBar extends React.Component {
     console.log(this.state);
 
     return (
-      <div class={`sidebar-container ${showSideBar ? 'show' : 'hide'}`}>
-        <h1 id="market-header">Market Place</h1>
-        <MarketPlaceContainer data={this.state.todos[0]} />
+      <div className="overal-market">
         <HideShowArrow
           showSideBar={showSideBar}
           toggleSidebar={this.toggleSidebar}
         />
+        <div class={`sidebar-container ${showSideBar ? 'show' : 'hide'}`}>
+          <h1 id="market-header">Market Place</h1>
+          <MarketPlaceContainer data={this.state.marketplace[0]} />
+        </div>
       </div>
     );
   }
 }
 
-export default SideBar;
+const mapStateToProps = state => {
+  return { userId: state.oAuth.userId };
+};
+
+export default connect(mapStateToProps)(SideBar);
