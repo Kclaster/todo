@@ -39,6 +39,9 @@ class MarketPlaceSnippet extends React.Component {
     e.preventDefault();
     console.log('userid', this.props.userId);
     if (!this.state.isAfter && this.state.newBid < this.props.startingBid) {
+      this.setState({
+        newBestBid: this.state.newBid
+      });
       axios.put(`/todos/market`, {
         best_bid: this.state.newBid,
         best_bidderId: this.props.userId,
@@ -51,6 +54,7 @@ class MarketPlaceSnippet extends React.Component {
   };
 
   render() {
+    console.log(this.state);
     return (
       <div className="market-snippet-container">
         <ExpansionPanelSummary>
@@ -63,7 +67,12 @@ class MarketPlaceSnippet extends React.Component {
                 {this.props.title}
               </h3>
               <h4>Expiration: {this.props.expiration}</h4>
-              <h4>Current Bid: {this.props.startingBid}</h4>
+              <h4>
+                Current Bid:{' '}
+                {this.state.newBestBid
+                  ? this.state.newBestBid
+                  : this.props.startingBid}
+              </h4>
               <p>Description: {this.props.description}</p>
               <form onSubmit={e => this.handleSubmit(e)}>
                 <input
