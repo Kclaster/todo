@@ -15,10 +15,15 @@ class ToDoList extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`/todos/minStar/${this.props.userId}`).then(response => {
-      this.setState({
-        todos: [...this.state.todos, ...response.data]
-      });
+    console.log(this.props);
+    axios.get(`/todos/123/${this.props.userId}`).then(response => {
+      console.log(response);
+      this.setState(
+        {
+          todos: [...this.state.todos, ...response.data]
+        },
+        () => console.log(this.state.todos)
+      );
     });
   }
 
@@ -28,7 +33,13 @@ class ToDoList extends React.Component {
         <h1>Your mom</h1>
         {this.state.todos.length !== 0 &&
           this.state.todos.map(cur => {
-            return <ToDoItem title={cur.title} description={cur.description} />;
+            return (
+              <ToDoItem
+                title={cur.title}
+                description={cur.description}
+                taskId={cur.id}
+              />
+            );
           })}
       </div>
     );

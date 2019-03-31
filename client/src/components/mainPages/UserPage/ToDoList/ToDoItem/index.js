@@ -15,43 +15,68 @@
 
 import React from 'react';
 import './style.css';
-import classNames from 'classnames';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+// import classNames from 'classnames';
+// import ListItem from '@material-ui/core/ListItem';
+// import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 // import ListItemText from '@material-ui/core/ListItemText';
 import Button from '@material-ui/core/Button';
-// import PropTypes from 'prop-types';
-import green from '@material-ui/core/colors/green';
-import { withStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
+
+// import green from '@material-ui/core/colors/green';
+// import { withStyles } from '@material-ui/core/styles';
+// import List from '@material-ui/core/List';
+import axios from 'axios';
+import Card from '@material-ui/core/Card';
+// import { withStyles } from '@material-ui/core/styles';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Typography from '@material-ui/core/Typography';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
-const styles = theme => ({
-  button: {
-    margin: theme.spacing.unit,
-  },
-  input: {
-    display: 'none',
-  },
-});
 
-const ToDoItem =(props) => {
+
+
+const ToDoItem = (props) => {
   const { classes } = props;
+
+  console.log(props)
+  const handleClick = (e) => {
+    e.preventDefault();
+    axios
+      .delete(`/todos/delete/${props.taskId}`)
+      .then(response => {
+        console.log(response)
+      })
+  
+  }
+  
   return (
     <div>
-      <List >
-        <h3 className="to-do-item-chore">{props.title}</h3>
-        <ListItemSecondaryAction>
 
-          <Button 
-          variant="contained" 
-          color="secondary" 
-          className={classes.button}>
+
+
+      <Card >
+        <ExpansionPanel>
+          <ExpansionPanelSummary >
+            <Typography >{props.title}</Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <Typography>
+              {props.description}
+            </Typography>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
+        <Button
+          variant="contained"
+          color="secondary"
+          className="complete-button"
+          onClick={(e) => handleClick(e)}
+        >
           Complete Task
           </Button>
+      </Card>
 
-        </ListItemSecondaryAction>
-      </List>
     </div>
   );
 }
@@ -60,4 +85,4 @@ const ToDoItem =(props) => {
 //   classes: PropTypes.object.isRequired,
 // };
 
-export default withStyles(styles)(ToDoItem);
+export default ToDoItem;

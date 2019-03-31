@@ -53,7 +53,22 @@ class ReviewContainer extends React.Component {
 
 
       })
+      console.log('akunea')
+      axios.get('/user/reviews/yourmom')
+        .then(res => {
+      console.log(res)
+          this.setState({
+            review: res.data
+    
+    
+          })
+    
+          // console.log(this.setState.review)
+    
+    
+        })
   }
+
 
 
 
@@ -64,10 +79,10 @@ class ReviewContainer extends React.Component {
     if (this.state.displayChild) {
       display =
         <div className="review-container">
-          <Review users={(this.state.arr) ? this.state.arr.slice(0, 3) : null} />
+          <Review data={this.state.review} users={(this.state.arr) ? this.state.arr.slice(0, 3) : null} />
           <About content={this.aboutContent1} />
           <About content={this.aboutContent2} />
-          <Review users={(this.state.arr) ? this.state.arr.slice(3, 6) : null} />
+          <Review  data={this.state.review} users={(this.state.arr) ? this.state.arr.slice(3, 6) : null} />
         </div>
     } else {
       display = null
