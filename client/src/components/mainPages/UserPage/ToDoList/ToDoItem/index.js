@@ -33,53 +33,32 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 // import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-
-
-
-
-const ToDoItem = (props) => {
+const ToDoItem = props => {
   const { classes } = props;
 
-  console.log(props)
-  const handleClick = (e) => {
-    e.preventDefault();
-    axios
-      .delete(`/todos/delete/${props.taskId}`)
-      .then(response => {
-        console.log(response)
-      })
-  
-  }
-  
   return (
     <div>
-
-
-
-      <Card >
+      <Card>
         <ExpansionPanel>
-          <ExpansionPanelSummary >
-            <Typography >{props.title}</Typography>
+          <ExpansionPanelSummary>
+            <Typography>{props.title}</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Typography>
-              {props.description}
-            </Typography>
+            <Typography>{props.description}</Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <Button
           variant="contained"
           color="secondary"
           className="complete-button"
-          onClick={(e) => handleClick(e)}
+          onClick={e => props.handleClick(e, props.taskId)}
         >
           Complete Task
-          </Button>
+        </Button>
       </Card>
-
     </div>
   );
-}
+};
 
 // ToDoItem.propTypes = {
 //   classes: PropTypes.object.isRequired,

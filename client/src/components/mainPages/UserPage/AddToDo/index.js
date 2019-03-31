@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
-import { updateList } from '../../../../redux/actions';
+import { updateList, updateTodo } from '../../../../redux/actions';
 import TextField from '@material-ui/core/TextField';
 
 class AddToDo extends React.Component {
@@ -74,7 +74,7 @@ class AddToDo extends React.Component {
       minStar,
       expiredTime
     };
-
+    this.props.updateTodo(post);
     addToDo(post);
     this.setState({
       description: '',
@@ -173,5 +173,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { updateList }
+  { updateList, updateTodo }
 )(AddToDo);
