@@ -1,4 +1,4 @@
-import { SET_HEIGHT, SIGN_IN, SIGN_OUT } from './types';
+import { SET_HEIGHT, SIGN_IN, SIGN_OUT, UPDATE_STATE } from './types';
 
 export const setHeight = action => {
   return {
@@ -17,5 +17,12 @@ export const signIn = action => {
 export const signOut = () => {
   return {
     type: SIGN_OUT
+  };
+};
+
+export const updateList = action => {
+  return {
+    type: UPDATE_STATE,
+    payload: action
   };
 };

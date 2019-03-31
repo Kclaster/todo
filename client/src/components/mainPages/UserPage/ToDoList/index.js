@@ -16,17 +16,13 @@ class ToDoList extends React.Component {
 
   componentDidMount() {
     axios.get(`/todos/minStar/${this.props.userId}`).then(response => {
-      this.setState(
-        {
-          todos: [...this.state.todos, ...response.data]
-        },
-        () => console.log(this.state.todos)
-      );
+      this.setState({
+        todos: [...this.state.todos, ...response.data]
+      });
     });
   }
 
   render() {
-    console.log(this.state.todos);
     return (
       <div className="list-container">
         <h1>Your mom</h1>

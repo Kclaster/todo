@@ -18,7 +18,6 @@ class SideBar extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props.userId);
     axios
       .get(`/user/${this.props.userId}`)
       .then(response => {
@@ -27,7 +26,6 @@ class SideBar extends React.Component {
         });
       })
       .then(() => {
-        console.log(this.state);
         axios
           .get(`/todos/minStar/${this.state.currentUser[0].star_review}`)
           .then(response => {
@@ -54,8 +52,6 @@ class SideBar extends React.Component {
 
   render() {
     let { showSideBar } = this.state;
-    console.log(this.state);
-
     return (
       <div className="overal-market">
         <HideShowArrow
@@ -64,7 +60,9 @@ class SideBar extends React.Component {
         />
         <div className={`sidebar-container ${showSideBar ? 'show' : 'hide'}`}>
           <h1 id="market-header">Market Place</h1>
-          <MarketPlaceContainer data={this.state.marketplace} />
+          <MarketPlaceContainer
+            data={[...this.state.marketplace, ...this.props.form]}
+          />
         </div>
       </div>
     );
@@ -72,7 +70,7 @@ class SideBar extends React.Component {
 }
 
 const mapStateToProps = state => {
-  return { userId: state.oAuth.userId };
+  return { userId: state.oAuth.userId, form: state.update };
 };
 
 export default connect(mapStateToProps)(SideBar);
