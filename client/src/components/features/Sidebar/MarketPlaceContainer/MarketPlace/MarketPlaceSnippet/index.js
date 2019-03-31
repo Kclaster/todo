@@ -15,7 +15,8 @@ class MarketPlaceSnippet extends React.Component {
       todaysDate: new Date(),
       expireDate: this.props.expiration,
       isAfter: null,
-      newBid: 0
+      newBid: '',
+      newBestBid: ''
     };
   }
 
@@ -44,6 +45,9 @@ class MarketPlaceSnippet extends React.Component {
         taskId: this.props.taskId
       });
     }
+    this.setState({
+      newBid: ''
+    });
   };
 
   render() {
@@ -63,6 +67,7 @@ class MarketPlaceSnippet extends React.Component {
               <p>Description: {this.props.description}</p>
               <form onSubmit={e => this.handleSubmit(e)}>
                 <input
+                  value={this.state.newBid}
                   onChange={e => this.handleChange(e)}
                   type="text"
                   placeholder="Your Bid"

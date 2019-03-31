@@ -14,31 +14,48 @@ class ToDoList extends React.Component {
     };
   }
 
+  handleClick = (e, taskId) => {
+    e.preventDefault();
+    console.log(taskId);
+    console.log(this.state.todos);
+    this.setState({
+      todos: this.state.todos.filter(cur => {
+        return cur.id !== taskId;
+      })
+    });
+    axios.delete(`/todos/delete/${taskId}`).then(response => {
+      console.log(response);
+    });
+  };
+
   componentDidMount() {
-    console.log(this.props)
-    axios
-
-      .get(`/todos/123/${this.props.userId}`)
-      .then(response => {
-        console.log(response)
-        this.setState(
-          {
-            todos: [...this.state.todos, ...response.data]
-          },
-          () => console.log(this.state.todos)
-        );
-      });
-
+    console.log(this.props);
+    axios.get(`/todos/123/${this.props.userId}`).then(response => {
+      console.log(response);
+      this.setState(
+        {
+          todos: [...this.state.todos, ...response.data]
+        },
+        () => console.log(this.state.todos)
+      );
+    });
   }
 
   render() {
-    console.log(this.state.todos);
+    // if (this.props.todos)
+    const list = [...this.state.todos, ...this.props.todo];
     return (
       <div className="list-container">
-        <h1>Tasks</h1>
-        {this.state.todos.length !== 0 &&
-          this.state.todos.map(cur => {
-            return <ToDoItem title={cur.title} description={cur.description} taskId={cur.id}/>;
+        {list !== 0 &&
+          list.map(cur => {
+            return (
+              <ToDoItem
+                handleClick={this.handleClick}
+                title={cur.title}
+                description={cur.description}
+                taskId={cur.id}
+              />
+            );
           })}
       </div>
     );
@@ -47,7 +64,8 @@ class ToDoList extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    userId: state.oAuth.userId
+    userId: state.oAuth.userId,
+    todo: state.todo
   };
 };
 

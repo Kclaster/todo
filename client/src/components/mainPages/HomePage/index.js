@@ -1,7 +1,7 @@
 import React from 'react';
 import FormContainer from './FormContainer';
 import ReviewContainer from './ReviewContainer';
-import AboutContainer from './AboutContainer'
+import AboutContainer from './AboutContainer';
 import Header from '../../features/Header';
 import Footer from '../../features/Footer';
 import ScrollingQuotes from './ScrollingQuotes';
@@ -54,7 +54,9 @@ class HomePage extends React.Component {
               alt="cleaning"
               src={pic}
             />
-            <ScrollingQuotes />
+            <div className="bob">
+              <ScrollingQuotes />
+            </div>
           </div>
           <div
             className="body-content"

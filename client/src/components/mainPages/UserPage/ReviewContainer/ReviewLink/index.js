@@ -8,35 +8,25 @@ import TextField from '@material-ui/core/TextField';
 import ReactStars from 'react-stars';
 import axios from 'axios';
 
-
-
-
-
-
 class ReviewLink extends React.Component {
-
-
   constructor(props) {
     super(props);
 
     this.state = {
       userId: '2',
       name: '',
-      stars: null,
+      stars: null
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-
   }
 
-
   handleChange(event) {
-    console.log(event);
     const target = event.target.value;
-    const name = this.state.name + target
+    const name = this.state.name + target;
     this.setState({
-      name: target,
+      name: target
     });
   }
 
@@ -46,37 +36,24 @@ class ReviewLink extends React.Component {
     let post = {
       userId,
       name,
-      stars,
+      stars
+    };
 
-    }
-
-
-    axios.post('/user/reviews', post)
-      .then(res => {
-        console.log("post to user" + res)
-      })
-      .catch(err =>{
-        console.log(err)
-      })
-
+    axios
+      .post('/user/reviews', post)
+      .then(res => {})
+      .catch(err => {});
   }
 
-  handleStarChange = stars =>{
-    this.setState({stars}, () => console.log(this.state.stars))
-  }
-
- 
-
-  
-
+  handleStarChange = stars => {
+    this.setState({ stars }, () => console.log(this.state.stars));
+  };
 
   render() {
-    console.log(this.state)
     return (
-
       <div className="userpage-review">
         <h3>Leave a comment for.....</h3>
-        <form onSubmit={this.handleSubmit} >
+        <form onSubmit={this.handleSubmit}>
           <TextField
             id="outlined-multiline-flexible"
             label="Leave a review"
@@ -85,13 +62,17 @@ class ReviewLink extends React.Component {
             value={this.state.value}
             onChange={this.handleChange}
             margin="normal"
-            variant="outlined" />
-          <ReactStars onChange={(value) => this.handleStarChange(value)} count={5}
-            size={24} />
+            variant="outlined"
+          />
+          <ReactStars
+            onChange={value => this.handleStarChange(value)}
+            count={5}
+            size={24}
+          />
           <input type="submit" value="Submit" />
         </form>
       </div>
-    )
+    );
   }
 }
 

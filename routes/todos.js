@@ -42,7 +42,6 @@ router.get('/123/:id', function (req, res) {
     ` SELECT * FROM users.todos WHERE userId = "${req.params.id}"`,
     function (err, results) {
       if (results) {
-        // console.log(results);
         return res.send(results);
       }
     });
