@@ -1,13 +1,13 @@
 .to-do-item-chore {
   /* color: red; */
   list-style:none;
+  z-index: 1;
 }
 p {
   text-align: center;
   font-size: 10px;
 }
 .complete-button{
-  padding: 50px;
   position: flex;
   float: left;
 }

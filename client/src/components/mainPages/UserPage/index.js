@@ -35,18 +35,6 @@ class UserPage extends React.Component {
         });
       });
   }
-  // console.log(getTodos(this.props.userId));
-  // try {
-  //   const result = await getTodos(this.props.userId);
-  //   console.log(result);
-  //   this.setState({
-  //     list: result
-  //   });
-  // } catch (error) {
-  //   this.setState({
-  //     error
-  //   });
-  // }
 
   render() {
     return (

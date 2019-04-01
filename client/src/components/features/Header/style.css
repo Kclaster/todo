@@ -4,4 +4,5 @@
   width: 100vw;
   background: grey;
   top: 0;
+  z-index: 4;
 }
