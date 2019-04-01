@@ -51,6 +51,7 @@ const ToDoItem = props => {
             <Button
               variant="contained"
               color="secondary"
+              style={{margin:"20px"}}
               className="complete-button"
               onClick={e => props.handleClick(e, props.taskId)}
             >

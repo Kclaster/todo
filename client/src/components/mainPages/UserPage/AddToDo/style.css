@@ -1,12 +1,14 @@
 
 .todo-container{
     position: absolute;
-    top: 80px;
+    top: 100px;
     right: 0;
     width: 40vw;
     height: 40vh;
     z-index: 0;
-    /* background-color: white; */
+    background:#f9fafb;
+    padding:20px;
+    height:100%;
 }
 
 
@@ -14,4 +16,6 @@
     padding: 2px 0 0 12px;
     position: sticky;
     top: 100px;
+    background:#fff;
+    padding:20px;
 }

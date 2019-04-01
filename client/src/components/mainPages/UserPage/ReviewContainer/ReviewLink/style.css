@@ -3,7 +3,7 @@
     align-self: auto;
     padding: 5px 20px;
     height: 40vh;
-    width: 60vw;
+    width: 55vw;
 }
 
 h3{
@@ -15,4 +15,9 @@ h3{
 #MuiOutlinedInput-multiline-29 {
     padding: 60px 30px;
     box-sizing: border-box;
+}
+
+
+fieldset{
+    background:#fff;
 }

@@ -1,8 +1,24 @@
 .body {
-margin: 100px 0px 100px 0px;
+background:#f1f1f1;
+height:95%;
 }
 
 .userpage-body {
   width:40vw;
-  height:100vh;
+  /* height:100vh; */
 }
+
+
+.todo{
+ height:100vh;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+}
+
+

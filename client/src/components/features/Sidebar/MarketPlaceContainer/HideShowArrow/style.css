@@ -1,24 +1,28 @@
 .arrow {
   width: 40px;
   height: 40px;
-  border-top: 1px solid grey;
-  border-right: 1px solid grey;
+  border-top: 3px solid #67727e;
+  border-right: 3px solid #67727e;
   position: fixed;
-  top: 15%;
+  top: 50%;
+  z-index:1;
 
 }
 
 .right-arrow {
   transform: rotate(-135deg);
-  right: 2vw;
+  right: 1vw;
 }
 
 .left-arrow {
   transform: rotate(45deg);
   right: 42vw;
+  z-index: 3;
 }
 
 .arrow:hover {
   opacity: 0.5;
   cursor: pointer;
 }
+
+

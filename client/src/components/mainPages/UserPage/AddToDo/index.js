@@ -91,6 +91,7 @@ class AddToDo extends React.Component {
       <div className="todo-container">
         <form>
           <div className="form-container">
+          <h2>Create a Task</h2>
             <Moment ref={this.timeRef}>{date}</Moment>
             <div className="form-item">
               <Input
