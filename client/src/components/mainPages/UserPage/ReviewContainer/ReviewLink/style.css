@@ -1,14 +1,14 @@
 .userpage-review {
-    border: 1px solid black; 
     position: absolute;
     align-self: auto;
-    margin: 55px;
-    padding: 5px 75px;
+    padding: 5px 20px;
+    height: 40vh;
+    width: 60vw;
 }
 
 h3{
     text-align: center;
-    padding: 5px;
+    padding: 10px 0 0 0;
 }
 
 

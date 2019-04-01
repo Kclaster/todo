@@ -1,1 +1,17 @@
 
+.todo-container{
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 40vw;
+    height: 40vh;
+    z-index: 0;
+    /* background-color: white; */
+}
+
+
+.form-container{
+    padding: 2px 0 0 12px;
+    position: sticky;
+    top: 100px;
+}

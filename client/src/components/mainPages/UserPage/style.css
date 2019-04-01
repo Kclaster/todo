@@ -1,9 +1,8 @@
 .body {
-  margin-top: 100px;
+margin: 100px 0px 100px 0px;
 }
 
 .userpage-body {
-  display: flex;
-  display: flex;
-  float: left;
+  width:40vw;
+  height:100vh;
 }

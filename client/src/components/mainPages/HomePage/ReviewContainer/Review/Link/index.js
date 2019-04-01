@@ -33,6 +33,8 @@ const Link = (props) => {
             size={24} edit={false} />
             <Typography component="span" color="textPrimary">
 
+            {}
+
             {faker.hacker.phrase()}
             </Typography>
             {user.userReview}

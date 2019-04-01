@@ -94,10 +94,12 @@ class AddToDo extends React.Component {
             <Moment ref={this.timeRef}>{date}</Moment>
             <div className="form-item">
               <Input
+
                 placeholder="Title"
                 onChange={this.handleChange}
                 name="title"
                 type="text"
+                fullWidth
                 value={this.state.title}
               />
             </div>
@@ -107,6 +109,7 @@ class AddToDo extends React.Component {
                 onChange={this.handleChange}
                 name="description"
                 type="text"
+                fullWidth
                 value={this.state.description}
               />
             </div>
@@ -118,6 +121,7 @@ class AddToDo extends React.Component {
                 onChange={this.handleChange}
                 name="startingBid"
                 type="number"
+            
                 value={this.state.startingBid}
                 InputLabelProps={{
                   shrink: true

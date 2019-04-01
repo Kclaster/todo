@@ -46,6 +46,7 @@ class ToDoList extends React.Component {
     const list = [...this.state.todos, ...this.props.todo];
     return (
       <div className="list-container">
+      <h2>Task</h2>
         {list !== 0 &&
           list.map(cur => {
             return (
