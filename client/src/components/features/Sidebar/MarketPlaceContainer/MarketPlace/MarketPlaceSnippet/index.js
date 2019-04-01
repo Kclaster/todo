@@ -70,14 +70,16 @@ class MarketPlaceSnippet extends React.Component {
               >
                 {this.props.title}
               </h3>
-              <h4>Expiration: {duration}</h4>
-              <h4>
+                <h6>{this.props.description}</h6>
+                <div className="bid-info-container">
+              <p>Expiration: {duration}</p>
+              <p>
                 Current Bid:{' '}
                 {this.state.newBestBid
                   ? this.state.newBestBid
                   : this.props.startingBid}
-              </h4>
-              <p>Description: {this.props.description}</p>
+              </p>
+              </div>
               <form onSubmit={e => this.handleSubmit(e)}>
                 <input
                   value={this.state.newBid}
