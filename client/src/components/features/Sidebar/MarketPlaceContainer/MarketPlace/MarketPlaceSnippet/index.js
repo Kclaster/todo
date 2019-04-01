@@ -55,6 +55,9 @@ class MarketPlaceSnippet extends React.Component {
 
   render() {
     console.log(this.state);
+    let today = new Date();
+    let expiration = this.props.expiration;
+    let duration = moment(today).to(moment(expiration));
     return (
       <div className="market-snippet-container">
       <Card>
@@ -67,7 +70,7 @@ class MarketPlaceSnippet extends React.Component {
               >
                 {this.props.title}
               </h3>
-              <h4>Expiration: {this.props.expiration}</h4>
+              <h4>Expiration: {duration}</h4>
               <h4>
                 Current Bid:{' '}
                 {this.state.newBestBid
