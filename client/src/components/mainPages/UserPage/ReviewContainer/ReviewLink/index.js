@@ -1,12 +1,9 @@
 import React from 'react';
 import './style.css';
-// import PropTypes from 'prop-types';
-// import classNames from 'classnames';
-// import { withStyles } from '@material-ui/core/styles';
-// import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import ReactStars from 'react-stars';
 import axios from 'axios';
+import Button from '@material-ui/core/Button';
 
 class ReviewLink extends React.Component {
   constructor(props) {
@@ -41,8 +38,8 @@ class ReviewLink extends React.Component {
 
     axios
       .post('/user/reviews', post)
-      .then(res => {})
-      .catch(err => {});
+      .then(res => { })
+      .catch(err => { });
   }
 
   handleStarChange = stars => {
@@ -58,18 +55,30 @@ class ReviewLink extends React.Component {
             id="outlined-multiline-flexible"
             label="Leave a review"
             multiline
-            rowsMax="6"
+            rows="6"
+            rowsMax="10"
             value={this.state.value}
             onChange={this.handleChange}
             margin="normal"
+            fullWidth
             variant="outlined"
           />
           <ReactStars
             onChange={value => this.handleStarChange(value)}
+            value={this.state.stars}
             count={5}
             size={24}
           />
-          <input type="submit" value="Submit" />
+
+          <Button
+            variant="contained"
+            onClick={this.handleSubmit}
+            className="submit-btn"
+            type="submit"
+            value="" 
+          >
+            Submit Review
+            </Button>
         </form>
       </div>
     );

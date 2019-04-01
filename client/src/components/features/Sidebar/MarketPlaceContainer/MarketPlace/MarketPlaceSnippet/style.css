@@ -3,6 +3,10 @@
   width: 80%;
   text-align: center;
   margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+  backdrop-filter: blur(2px);
+
+  
 }
 
 .market-snippet-container h3 {

@@ -53,20 +53,17 @@ class ReviewContainer extends React.Component {
 
 
       })
-      console.log('akunea')
-      axios.get('/user/reviews/yourmom')
-        .then(res => {
-      console.log(res)
-          this.setState({
-            review: res.data
+      // console.log('akunea')
+      // axios.get('/user/reviews/yourmom')
+      //   .then(res => {
+      // console.log(res)
+      //     this.setState({
+      //       review: res.data
     
     
-          })
+      //     })
     
-          // console.log(this.setState.review)
-    
-    
-        })
+      //   })
   }
 
 

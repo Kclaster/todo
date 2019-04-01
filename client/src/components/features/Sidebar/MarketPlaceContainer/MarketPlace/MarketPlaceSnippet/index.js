@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import Moment from 'react-moment';
+import Card from '@material-ui/core/Card';
 
 class MarketPlaceSnippet extends React.Component {
   constructor(props) {
@@ -57,6 +57,7 @@ class MarketPlaceSnippet extends React.Component {
     console.log(this.state);
     return (
       <div className="market-snippet-container">
+      <Card>
         <ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
@@ -86,6 +87,7 @@ class MarketPlaceSnippet extends React.Component {
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanelSummary>
+        </Card>
       </div>
     );
   }

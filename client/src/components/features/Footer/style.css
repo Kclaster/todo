@@ -4,13 +4,12 @@
     display: flex;
   justify-content: center;
     background:grey;
-    height: 20vh;
+    height: 40vh;
     width: 100vw;
    
 };
 
 h1{
-    margin: .25rem;
     padding: .25rem;
     color: white;
     text-align: center;
