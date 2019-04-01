@@ -16,8 +16,6 @@ class ToDoList extends React.Component {
 
   handleClick = (e, taskId) => {
     e.preventDefault();
-    console.log(taskId);
-    console.log(this.state.todos);
     this.setState({
       todos: this.state.todos.filter(cur => {
         return cur.id !== taskId;
@@ -29,9 +27,7 @@ class ToDoList extends React.Component {
   };
 
   componentDidMount() {
-    console.log(this.props);
     axios.get(`/todos/123/${this.props.userId}`).then(response => {
-      console.log(response);
       this.setState(
         {
           todos: [...this.state.todos, ...response.data]
@@ -42,7 +38,6 @@ class ToDoList extends React.Component {
   }
 
   render() {
-    // if (this.props.todos)
     const list = [...this.state.todos, ...this.props.todo];
     return (
       <div className="list-container">

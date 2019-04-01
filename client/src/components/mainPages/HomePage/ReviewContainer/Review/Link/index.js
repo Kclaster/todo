@@ -1,7 +1,5 @@
 import React from 'react';
 import './style.css'
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -12,10 +10,7 @@ import Card from '@material-ui/core/Card';
 import faker from 'faker';
 import ReactStars from 'react-stars';
 
-
-
 const Link = (props) => {
-
   const {user} = props;
 
   return (
@@ -32,9 +27,6 @@ const Link = (props) => {
             <ReactStars value={user.star_review} count={5}
             size={24} edit={false} />
             <Typography component="span" color="textPrimary">
-
-            {}
-
             {faker.hacker.phrase()}
             </Typography>
             {user.userReview}

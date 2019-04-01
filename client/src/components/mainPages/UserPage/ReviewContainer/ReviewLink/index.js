@@ -49,11 +49,11 @@ class ReviewLink extends React.Component {
   render() {
     return (
       <div className="userpage-review">
-        <h3>Leave a comment for.....</h3>
+        <h3>Leave a Review</h3>
         <form onSubmit={this.handleSubmit}>
           <TextField
             id="outlined-multiline-flexible"
-            label="Leave a review"
+            label="Review"
             multiline
             rows="6"
             rowsMax="10"
@@ -77,7 +77,7 @@ class ReviewLink extends React.Component {
             type="submit"
             value="" 
           >
-            Submit Review
+            Submit
             </Button>
         </form>
       </div>

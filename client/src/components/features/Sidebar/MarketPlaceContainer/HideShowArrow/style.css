@@ -1,28 +1,51 @@
-.arrow {
-  width: 40px;
-  height: 40px;
-  border-top: 3px solid #67727e;
-  border-right: 3px solid #67727e;
+.burger-container {
   position: fixed;
-  top: 50%;
-  z-index:1;
-
+  top: 110px;
+  right: 2vw;
+  z-index: 400;
 }
 
-.right-arrow {
-  transform: rotate(-135deg);
-  right: 1vw;
+.burger-bar {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
 }
 
-.left-arrow {
-  transform: rotate(45deg);
-  right: 42vw;
-  z-index: 3;
-}
-
-.arrow:hover {
+.burger-container:hover {
   opacity: 0.5;
   cursor: pointer;
 }
 
+.burger-hide {
+  display: none;
+}
 
+.ex-bar-right {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  transform: rotate(45deg);
+}
+
+.ex-container {
+  position: fixed;
+  top: 110px;
+  right: 2vw;
+  z-index: 100;
+}
+
+.ex-container:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.ex-bar-left {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  transform: rotate(-45deg);
+  margin-top: -10px;
+}

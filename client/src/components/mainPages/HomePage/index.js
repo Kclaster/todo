@@ -1,13 +1,11 @@
 import React from 'react';
 import FormContainer from './FormContainer';
 import ReviewContainer from './ReviewContainer';
-import AboutContainer from './AboutContainer';
 import Header from '../../features/Header';
 import Footer from '../../features/Footer';
 import ScrollingQuotes from './ScrollingQuotes';
 import { setHeight } from '../../../redux/actions';
 import { connect } from 'react-redux';
-
 import pic from '../../../pictures/agenda-blank-checklist-3299.jpg';
 import pic2 from '../../../pictures/scrolling3.jpg';
 import './style.css';
@@ -91,7 +89,6 @@ const mapStateToProps = state => {
     height: state.setHeight.height
   };
 };
-
 export default connect(
   mapStateToProps,
   { setHeight }

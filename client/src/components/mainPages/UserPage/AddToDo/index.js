@@ -1,14 +1,14 @@
 import React from 'react';
-import Moment from 'react-moment';
 import moment from 'moment';
 import './style.css';
 import { addToDo, addToMarket } from '../../../features/axios';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import { updateList, updateTodo } from '../../../../redux/actions';
 import TextField from '@material-ui/core/TextField';
+import ReactStars from 'react-stars';
+
 
 class AddToDo extends React.Component {
   constructor() {
@@ -62,6 +62,10 @@ class AddToDo extends React.Component {
     });
   };
 
+  handleStarChange = minStar => {
+    this.setState({ minStar }, () => console.log(this.state.minStar));
+  };
+
   handleSubmit = event => {
     event.preventDefault();
     let userid = this.props.userid;
@@ -91,8 +95,8 @@ class AddToDo extends React.Component {
       <div className="todo-container">
         <form>
           <div className="form-container">
-          <h2>Create a Task</h2>
-            <Moment ref={this.timeRef}>{date}</Moment>
+            {/* <Moment ref={this.timeRef}>{date}</Moment> */}
+            <h3>Create a Task</h3>
             <div className="form-item">
               <Input
 
@@ -105,64 +109,72 @@ class AddToDo extends React.Component {
               />
             </div>
             <div className="form-item">
-              <Input
-                placeholder="Description"
-                onChange={this.handleChange}
-                name="description"
-                type="text"
-                fullWidth
-                value={this.state.description}
-              />
-            </div>
-            <div className="form-item">
               <TextField
-                id="outlined-number"
-                label="Starting Bid"
-                value={this.state.age}
+                id="outlined-multiline-flexible"
+                label="Description"
+                name="description"
+                multiline
+                rows="4"
+                rowsMax="6"
+                value={this.state.description}
                 onChange={this.handleChange}
-                name="startingBid"
-                type="number"
-            
-                value={this.state.startingBid}
-                InputLabelProps={{
-                  shrink: true
-                }}
                 margin="normal"
+                fullWidth
                 variant="outlined"
               />
+
             </div>
-            <div className="form-item">
-              <label>Minimum Stars to Bid</label>
-              <select
-                value={this.state.minStar}
-                onChange={this.handleChange}
-                name="minStar"
+            <div className="main-star-container">
+              <div className="form-item">
+                <TextField
+                  id="outlined-number"
+                  label="Starting Bid"
+                  value={this.state.startingBid}
+                  onChange={this.handleChange}
+                  name="startingBid"
+                  type="number"
+
+                  value={this.state.startingBid}
+                  InputLabelProps={{
+                    shrink: true
+                  }}
+                  margin="normal"
+                  variant="outlined"
+                />
+              </div>
+              <div className="form-item-stars">
+                <h6>Minimum Stars to Bid</h6>
+                <ReactStars
+                  id="bid-stars"
+                  onChange={minStar => this.handleStarChange(minStar)}
+                  value={this.state.minStar}
+                  name="minStar"
+                  type="number"
+                  count={5}
+                  size={20}
+                />
+              </div>
+            </div>
+            <div className="add-buttons">
+              <Button
+                variant="contained"
+                onClick={this.handleSubmit}
+                className="submit-btn"
+                type="submit"
+                value="Add to My Todos"
               >
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
+                Add to My Todos
+            </Button>
+              <Button
+                variant="contained"
+                onClick={this.handleMarketSubmit}
+                className="submit-btn"
+                type="submit"
+                value="Add to MarketPlace"
+              >
+                Add to MarketPlace
+            </Button>
             </div>
-            <Button
-              variant="contained"
-              onClick={this.handleSubmit}
-              className="submit-btn"
-              type="submit"
-              value="Add to My Todos"
-            >
-              Add to My Todos
-            </Button>
-            <Button
-              variant="contained"
-              onClick={this.handleMarketSubmit}
-              className="submit-btn"
-              type="submit"
-              value="Add to MarketPlace"
-            >
-              Add to MarketPlace
-            </Button>
           </div>
         </form>
       </div>

@@ -2,11 +2,6 @@ import React from 'react';
 import Link from './Link';
 import './style.css'
 
-
-
-
-
-
 const Review = (props) => {
   console.log(props)
 return (
@@ -14,8 +9,6 @@ return (
       {props.users.map((user, index) => {
         return <Link key={index} user={user} />
       })}
-
-
     </div>
   )
 }

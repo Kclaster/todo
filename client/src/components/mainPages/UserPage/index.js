@@ -4,7 +4,6 @@ import AddToDo from './AddToDo';
 import ReviewContainer from './ReviewContainer';
 import ToDoList from './ToDoList';
 import Header from '../../features/Header';
-import Footer from '../../features/Footer';
 import Sidebar from '../../features/Sidebar';
 import { connect } from 'react-redux';
 import './style.css';
@@ -35,18 +34,6 @@ class UserPage extends React.Component {
         });
       });
   }
-  // console.log(getTodos(this.props.userId));
-  // try {
-  //   const result = await getTodos(this.props.userId);
-  //   console.log(result);
-  //   this.setState({
-  //     list: result
-  //   });
-  // } catch (error) {
-  //   this.setState({
-  //     error
-  //   });
-  // }
 
   render() {
     return (

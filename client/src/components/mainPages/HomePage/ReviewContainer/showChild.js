@@ -1,12 +1,6 @@
 import React from 'react';
 import './style.css';
 import Review from './Review'
-import { json } from 'body-parser';
-// import axios from "../../../features/axios"
-// import { getUser } from '../../../axios';
-// import Router from '../../../../../../routes/'
-import Users from '../../../../data/users';
-
 import About from '../AboutContainer/About';
 
 

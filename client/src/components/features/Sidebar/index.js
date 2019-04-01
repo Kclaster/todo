@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import './style.css';
 
-
 class SideBar extends React.Component {
   constructor() {
     super();
