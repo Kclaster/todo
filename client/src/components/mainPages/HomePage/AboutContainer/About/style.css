@@ -1,7 +1,9 @@
 .about-tile{
 text-align: center;
+font-family: 'Nunito', sans-serif;
 }
 
-p{
-    font-size: 25px;
+.about-text{
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
 }

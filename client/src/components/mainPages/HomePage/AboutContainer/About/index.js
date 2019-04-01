@@ -8,7 +8,7 @@ const About = (props) => {
   return (
     <div className="tile about-tile">
       <h1>{content.header}</h1>
-      <p>{content.text}</p>
+      <p className="about-text" >{content.text}</p>
     </div>)
 }
 

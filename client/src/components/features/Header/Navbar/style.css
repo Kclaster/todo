@@ -4,6 +4,7 @@
   right: 0;
   height: 100%;
   align-items: flex-end;
+  z-index: 2;
 }
 
 .link {
