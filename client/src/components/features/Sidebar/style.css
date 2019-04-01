@@ -9,13 +9,14 @@
   text-align: center;
   overflow: scroll;
   z-index: 2;
-  
-  
+
 
 }
 
 .show {
   transform: translateX(0);
+
+  
   
 }
 
