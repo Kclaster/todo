@@ -62,6 +62,7 @@ class MarketPlaceSnippet extends React.Component {
       <div className="market-snippet-container">
       <Card>
         <ExpansionPanelSummary>
+          <div className="contentContain">
           <ExpansionPanelDetails>
             <Typography>
               <h3
@@ -89,6 +90,7 @@ class MarketPlaceSnippet extends React.Component {
               </form>
             </Typography>
           </ExpansionPanelDetails>
+          </div>
         </ExpansionPanelSummary>
         </Card>
       </div>
