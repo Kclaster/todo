@@ -1,24 +1,50 @@
-.arrow {
-  width: 40px;
-  height: 40px;
-  border-top: 1px solid grey;
-  border-right: 1px solid grey;
+.burger-container {
   position: fixed;
-  top: 15%;
-
-}
-
-.right-arrow {
-  transform: rotate(-135deg);
+  top: 110px;
   right: 2vw;
 }
 
-.left-arrow {
-  transform: rotate(45deg);
-  right: 42vw;
+.burger-bar {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
 }
 
-.arrow:hover {
+.burger-container:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+
+.burger-hide {
+  display: none;
+}
+
+.ex-bar-right {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  transform: rotate(45deg);
+}
+
+.ex-container {
+  position: fixed;
+  top: 110px;
+  right: 2vw;
+  z-index: 100;
+}
+
+.ex-container:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.ex-bar-left {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  transform: rotate(-45deg);
+  margin-top: -10px;
 }
