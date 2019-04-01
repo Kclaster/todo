@@ -1,7 +1,5 @@
 import React from 'react';
 import './style.css';
-import Paper from '@material-ui/core/Paper';
-
 
 const About = (props) => {
   const content = props.content

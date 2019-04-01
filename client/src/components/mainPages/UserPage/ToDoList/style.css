@@ -1,11 +1,9 @@
 .list-container{
     background: lightskyblue;
-    width:60vw;
-    height:auot;
-
+    width:60%;
+    height: auto;
 }
 
 h2 {
     text-align: center;
-
 }
