@@ -7,7 +7,6 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 
-
 const ToDoItem = props => {
   const { classes } = props;
 
@@ -17,10 +16,14 @@ const ToDoItem = props => {
         <div className="todo-border">
           <ExpansionPanel>
             <ExpansionPanelSummary>
-              <Typography><h3>{props.title}</h3></Typography>
+              <Typography>
+                <h3>{props.title}</h3>
+              </Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-              <Typography className="todo-description" >{props.description}</Typography>
+              <Typography className="todo-description">
+                {props.description}
+              </Typography>
             </ExpansionPanelDetails>
             <Button
               variant="contained"
@@ -29,7 +32,7 @@ const ToDoItem = props => {
               onClick={e => props.handleClick(e, props.taskId)}
             >
               Complete Task
-        </Button>
+            </Button>
           </ExpansionPanel>
         </div>
       </Card>
