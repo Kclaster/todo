@@ -68,6 +68,7 @@ VALUE('Bob', 'Please mow my front lawn', 'Mow Lawn', 20, 2, 'April 10'),
 ('Tim', 'Clean the gutters of my house', 'Gutter cleaning', 15, 3, 'April 10'),
 ('Tim', 'Organize my bookshelf', 'Clean up some books', 10, 2,'April 10'),
 ('Bruce', 'Need a driver to airport', 'Chauffer', 25, 3,'April 10'),
+
 ('Talia', 'Deep cleaning of carpet', 'Carpet deep cleaner', 40, 2,'April 10');
 
 
@@ -83,17 +84,43 @@ CREATE TABLE `market` (
   `minStar` int(20) NOT NULL,
   PRIMARY KEY (`taskId`));
 
-    INSERT INTO `users`.`market`
-(
-`userId`,
-`best_bid`,
-`best_bidderId`,
-`expired`,
-`expiration_date`,
-`description`,
-`title`,
-`minStar`)
-VALUES("hello",20, "3", false, "2019-04-03T22:07:43.137Z", "mowing the lawn", "Lawn stuff", 3),
+
+INSERT INTO market(`userId`, `best_bid`, `best_bidderId`, `expiration_date`, `description`, `title`, `minStar`)
+VALUE('Bob', '17', 'talia', 'April 10', 'Please mow my front lawn', 'Mow Lawn', 2),
+('Bob', '12', 'Bruce','April 10','Walk around the block', 'Dog Walking', 3),
+('Dora','7.5','Stephanie', 'April 10', 'Take out my recyling', 'Sanitation expert', 1),
+('Dora','37', 'David', 'April 10', 'Please find my pet Boots', 'Bounty hunter', 40),
+('Dora','11', 'Bob', 'April 10', 'Pickup milk, cheese & sugar', 'Grocery Shopper', 2),
+('Jason','25', 'Tim', 'April 10', 'Detail & wax my bike.', 'Automotive detail', 5),
+('Jason','11', 'Cassandra','April 10', 'Need help removing leaves from my pool', 'Pool cleaning', 3),
+('Jason','5', 'Dora', 'April 10', 'run my dry cleaning', 'Dry cleaning', 2),
+('Richard','42', 'Barbara', 'April 10', 'Help me unmuck the stables', 'Cleaning stables', 4),
+('Richard','22', 'Tim', 'April 10', 'Sweep up peanuts from the stadium', 'Floor sweeping', 2),
+('Richard','7','Jason', 'April 10','Hang up promotional flyers', 'Marketing', 1),
+('Barbara','13','Cassandra', 'April 10', 'Need help building a ramp', 'Woodworking', 4),
+('Barbara','14','Talia', 'April 10', 'Pack up my kitchen', 'Moving boxes', 2),
+('Stephanie','17', 'Tim', 'April 10', 'Assistance needed painting a fence', 'Fence painting', 3),
+('David','5','Bob', 'April 10', 'Need someone to grind levels in my WOW account', 'Level me up', 3),
+('David', '9','Richard', 'April 10','Mop floors of my dining room, dust windows', 'Cleaning', 4),
+('Cassandra','25','Stephanie', 'April 10', 'babsitter from 3-6pm, pls have cpr cert', 'babysit my 11 year old', 5),
+('Cassandra','13','Bob','April 10', 'Help me haul some odds and ends to the dump', 'Truck needed', 1),
+('Tim','12', 'Dora', 'April 10', 'Clean the gutters of my house', 'Gutter cleaning', 3),
+('Tim','7','Barbara', 'April 10', 'Organize my bookshelf', 'Clean up some books', 2),
+('Bruce','19','Richard', 'April 10', 'Need a driver to airport', 'Chauffer', 3),
+('Talia','29','Bruce', 'April 10', 'Deep cleaning of carpet', 'Carpet deep cleaner', 2);
+
+
+--     INSERT INTO `users`.`market`
+-- (
+-- `userId`,
+-- `best_bid`,
+-- `best_bidderId`,
+-- `expired`,
+-- `expiration_date`,
+-- `description`,
+-- `title`,
+-- `minStar`)
+-- VALUES("hello",20, "3", false, "2019-04-03T22:07:43.137Z", "mowing the lawn", "Lawn stuff", 3)
 
 
 -- INSERT INTO users_list(`user`, `email`, `first_name`, `last_name`, `star_review`)
