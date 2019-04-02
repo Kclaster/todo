@@ -28,7 +28,7 @@ class ToDoList extends React.Component {
 
   componentDidMount() {
     console.log('todolist props.userID', this.props.userId);
-    axios.get(`/todos/${this.props.userId}`).then(response => {
+    axios.get(`/todos/personal/${this.props.userId}`).then(response => {
       this.setState(
         {
           todos: [...this.state.todos, ...response.data]
