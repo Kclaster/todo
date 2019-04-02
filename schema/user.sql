@@ -86,7 +86,7 @@ CREATE TABLE `market` (
 `description`,
 `title`,
 `minStar`)
-VALUES("hello",20, "3", false, "2019-04-03T22:07:43.137Z", "mowing the lawn", "Lawn stuff", 3)
+VALUES("hello",20, "3", false, "2019-04-03T22:07:43.137Z", "mowing the lawn", "Lawn stuff", 3),
 
 
 -- INSERT INTO users_list(`user`, `email`, `first_name`, `last_name`, `star_review`)

@@ -1,5 +1,5 @@
 .burger-container {
-  position: absolute;
+  position: fixed;
   top: 110px;
   right: 2vw;
   z-index: 400;
@@ -30,7 +30,7 @@
 }
 
 .ex-container {
-  position: absolute;
+  position: fixed;
   top: 110px;
   right: 2vw;
   z-index: 100;

@@ -1,28 +1,26 @@
 .footer {
-    z-index: 9;
-    display: flex;
+  z-index: 9;
+  display: flex;
   justify-content: center;
-    background:#67727e;
-    height: 60px;
-    width: 100vw;
-    padding-top:20px;
-    color:#fff;
-};
+  background: #67727e;
+  height: 60px;
+  width: 100vw;
+  padding-top: 20px;
+  color: #fff;
+}
 
-
-h1{
-    padding: .25rem;
-    color: white;
-    text-align: center;
-    
-};
+h1 {
+  padding: 0.25rem;
+  color: white;
+  text-align: center;
+}
 
 .githubIcon {
-  height:25px;
-  width:25px;
-   margin: .25rem;
-   padding: .25rem;
+  height: 25px;
+  width: 25px;
+  margin: 0.25rem;
+  padding: 0.25rem;
 }
-.copyright{
-  font-size:.8em;
+.copyright {
+  font-size: 0.8em;
 }

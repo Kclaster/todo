@@ -45,10 +45,10 @@ class UserPage extends React.Component {
           <div className="userpage-body">
             <ToDoList />
             <AddToDo />
+            <ReviewContainer />
           </div>
-          <ReviewContainer />
         </div>
-        <div className="footerHome">
+        <div className="footer">
           <Footer />
         </div>
       </div>
