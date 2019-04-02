@@ -1,5 +1,8 @@
 .google-login {
-  width: 97%;
+  /* width: 97%; */
+  float:right;
+  padding:0px 20px ;
+  margin-right:20px;
 }
 
 .hidden {

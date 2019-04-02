@@ -3,12 +3,14 @@
   width: 40vw;
   position: fixed;
   right: 0;
-  top: 100;
-  background: #424e67;
+  top: 100px;
+  background: #dce0e6;
   transition: transform 1s;
   text-align: center;
   overflow: scroll;
   z-index: 2;
+  border-left: 2px solid #67727e;
+  border-right: 2px solid #67727e;
 }
 
 .show {
@@ -25,4 +27,8 @@
 
 #market-header {
   margin-bottom: 15px;
+  color: #fff;
+  background-color: #67727e;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }

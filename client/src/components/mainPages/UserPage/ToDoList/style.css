@@ -1,11 +1,6 @@
 .list-container{
-    background: lightskyblue;
-    width:60vw;
-    height:auot;
-
-}
-
-h2 {
-    text-align: center;
-
+    padding:20px;
+    width:55vw;
+    height:auto;
+   
 }

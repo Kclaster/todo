@@ -93,7 +93,7 @@ router.put('/market', function (req, res) {
 router.put('/expired/:id', function (req, res) {
   let startingBid = parseInt(req.body.startingBid);
   connection.query(
-    `UPDATE market SET expired = 1 WHERE taskId = ${req.params.taskId}`,
+    `UPDATE market SET expired = 1 WHERE taskId = ${req.params.id}`,
     function (error, results, fields) {
       if (error) throw error;
       else {

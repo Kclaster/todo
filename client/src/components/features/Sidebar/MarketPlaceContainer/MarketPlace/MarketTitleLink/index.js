@@ -12,7 +12,7 @@ const MarketTitleLink = props => {
   return (
     <div onClick={props.toggleSnippet} className="market-title-link">
     <ExpansionPanel>
-        <ExpansionPanelSummary >
+        <ExpansionPanelSummary>
           <Typography >{props.title}</Typography>
         </ExpansionPanelSummary>
       </ExpansionPanel>
