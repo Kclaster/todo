@@ -46,7 +46,7 @@ class UserPage extends React.Component {
           <AddToDo />
           <ReviewContainer />
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }
