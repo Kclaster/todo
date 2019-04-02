@@ -8,7 +8,7 @@
 .burger-bar {
   width: 35px;
   height: 5px;
-  background-color: black;
+  background-color: #67727e;
   margin: 6px 0;
 }
 
@@ -24,7 +24,7 @@
 .ex-bar-right {
   width: 35px;
   height: 5px;
-  background-color: black;
+  background-color: #ddd;
   margin: 6px 0;
   transform: rotate(45deg);
 }
@@ -44,7 +44,7 @@
 .ex-bar-left {
   width: 35px;
   height: 5px;
-  background-color: black;
+  background-color: #ddd;
   margin: 6px 0;
   transform: rotate(-45deg);
   margin-top: -10px;

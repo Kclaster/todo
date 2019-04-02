@@ -2,7 +2,16 @@
   height: 100px;
   /* position: fixed; */
   width: 100%;
-  background:#fff;
+  background: #fff;
   /* top: 0; */
-  border-bottom:1px solid #dce0e6;
+  border-bottom: 1px solid #dce0e6;
+  position: fixed;
+  top: 0;
+  z-index: 502;
+}
+
+.header-brother {
+  height: 100px;
+  /* position: fixed; */
+  width: 100%;
 }

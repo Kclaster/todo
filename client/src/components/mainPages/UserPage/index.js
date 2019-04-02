@@ -6,7 +6,7 @@ import ToDoList from './ToDoList';
 import Header from '../../features/Header';
 import Sidebar from '../../features/Sidebar';
 import { connect } from 'react-redux';
-import Footer from './../../features/Footer'
+import Footer from '../../features/Footer';
 import './style.css';
 
 class UserPage extends React.Component {
@@ -38,18 +38,17 @@ class UserPage extends React.Component {
 
   render() {
     return (
-      <div className="todo">
+      <div >
         <Header />
         <div className="body">
           <Sidebar />
-          <div className="userpage-body">
-            <ToDoList />
-            <AddToDo />
-          </div>
+          <ToDoList />
+          <AddToDo />
+
           <ReviewContainer />
         </div>
-        <div className="footerHome">
-        <Footer />
+        <div className="footer">
+          <Footer />
         </div>
       </div>
     );
