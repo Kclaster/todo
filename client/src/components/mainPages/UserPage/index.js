@@ -42,13 +42,12 @@ class UserPage extends React.Component {
         <Header />
         <div className="body">
           <Sidebar />
-          <div className="userpage-body">
             <ToDoList />
             <AddToDo />
-          </div>
+
           <ReviewContainer />
         </div>
-        <div className="footerHome">
+        <div className="footer">
           <Footer />
         </div>
       </div>
