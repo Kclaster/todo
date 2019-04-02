@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 
 const ToDoItem = props => {
-  const { classes } = props;
+  // const { classes } = props;
 
   return (
     <div>

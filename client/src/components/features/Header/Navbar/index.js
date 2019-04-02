@@ -1,11 +1,9 @@
 import React from 'react';
 import './style.css';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import { signIn, signOut } from '../../../../redux/actions';
 import { connect } from 'react-redux';
+import pic from '../../../../pictures/logo2-01.png';
 
-import Button from '@material-ui/core/Button';
 
 import SignIn from './signIn';
 
@@ -17,6 +15,13 @@ class NavBar extends React.Component {
   render() {
     return (
       <div className="nav-container">
+            <a href="/"><img
+              ref={this.imageRef}
+              className="logoPic"
+              alt="logo"
+              src={pic}
+            /></a>
+
         <button onClick={this.handleClick}>User Page</button>
         <button onClick={this.props.signOut}>Home Page</button>
         {/* <Button href="/user" className="link">
