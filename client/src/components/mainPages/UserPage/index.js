@@ -38,18 +38,15 @@ class UserPage extends React.Component {
 
   render() {
     return (
-      <div className="todo">
+      <div>
         <Header />
         <div className="body">
           <Sidebar />
           <ToDoList />
           <AddToDo />
-
           <ReviewContainer />
         </div>
-        <div className="footer">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     );
   }
