@@ -1,10 +1,10 @@
 .market-snippet-container {
-  border: 1px solid #67727e;
+  /* border: 1px solid #67727e; */
   width: 80%;
   text-align: center;
   margin-bottom: 15px;
   font-family: 'Roboto', sans-serif;
-  backdrop-filter: blur(2px);
+  margin-right: 20px;
 
   
 }
@@ -13,6 +13,27 @@
   text-transform: uppercase;
 }
 
-.contentContain{
-  margin:0px auto;
+
+.bid-info-container{
+  display: flex;
+  flex-wrap: wrap;
+
 }
+
+.p{
+ padding: 5px;
+}
+.contentContain{
+  margin-left: 45px;
+}
+
+.expiration{
+  margin-right: 8px;
+}
+
+.bid{
+  margin-left: 20px;
+}
+
+
+

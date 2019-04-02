@@ -6,6 +6,7 @@
 p {
   text-align: center;
   font-size: 1em;
+  font-weight: 800;
 }
 .complete-button{
   position: flex;
@@ -18,4 +19,9 @@ p {
 
 .todo-border{
   border: 1px solid #ddd;
+}
+
+
+.MuiExpansionPanelSummary-root-232{
+  padding: 0 0px 0 24px;
 }
