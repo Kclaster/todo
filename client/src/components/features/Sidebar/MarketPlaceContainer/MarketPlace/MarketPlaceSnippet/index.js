@@ -102,7 +102,11 @@ class MarketPlaceSnippet extends React.Component {
                       type="text"
                       placeholder="Your Bid"
                     /> */}
-                    <Button variant="contained" type="submit">
+                    <Button
+                      onClick={e => this.handleSubmit(e)}
+                      variant="contained"
+                      type="submit"
+                    >
                       Submit Bid
                     </Button>
                     {/* <button type="submit">Submit Bid</button> */}

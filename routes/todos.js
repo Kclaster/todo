@@ -68,7 +68,6 @@ router.get('/minStar/:minstar', function(req, res) {
 ///// create axios calls for these gets for todos market place
 
 router.delete('/delete/:id', function(req, res) {
-  console.log('pooooop!!!');
   connection.query(`DELETE FROM todos WHERE id = "${req.params.id}"`, function(
     error,
     results
