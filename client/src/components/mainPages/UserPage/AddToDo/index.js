@@ -129,7 +129,7 @@ class AddToDo extends React.Component {
                   placeholder="Starting Bid"
                   onChange={this.handleChange}
                   name="title"
-                  type="text"
+                  type="number"
                   name="startingBid"
                   fullWidth
                   value={this.state.startingBid}
