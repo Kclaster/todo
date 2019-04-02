@@ -63,7 +63,7 @@ class MarketPlaceSnippet extends React.Component {
     return (
       <div className="market-snippet-container">
         <Card>
-          <ExpansionPanelSummaryv>
+          <ExpansionPanelSummary>
             <div className="contentContain">
               <ExpansionPanelDetails>
                 <Typography>
@@ -115,7 +115,7 @@ class MarketPlaceSnippet extends React.Component {
                 </Typography>
               </ExpansionPanelDetails>
             </div>
-          </ExpansionPanelSummary>
+          </ExpansionPanelSummary >
         </Card>
       </div>
     );

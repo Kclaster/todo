@@ -47,9 +47,7 @@ class UserPage extends React.Component {
 
           <ReviewContainer />
         </div>
-        <div className="footer">
-          <Footer />
-        </div>
+        {/* <Footer /> */}
       </div>
     );
   }
