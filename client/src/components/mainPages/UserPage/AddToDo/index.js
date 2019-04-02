@@ -95,7 +95,6 @@ class AddToDo extends React.Component {
       <div className="todo-container">
         <form>
           <div className="form-container">
-            {/* <Moment ref={this.timeRef}>{date}</Moment> */}
             <h3>Create a Task</h3>
             <div className="form-item">
               <Input
@@ -126,20 +125,14 @@ class AddToDo extends React.Component {
             </div>
             <div className="main-star-container">
               <div className="form-item">
-                <TextField
-                  id="outlined-number"
-                  label="Starting Bid"
-                  value={this.state.startingBid}
+                <Input
+                  placeholder="Starting Bid"
                   onChange={this.handleChange}
+                  name="title"
+                  type="text"
                   name="startingBid"
-                  type="number"
-
+                  fullWidth
                   value={this.state.startingBid}
-                  InputLabelProps={{
-                    shrink: true
-                  }}
-                  margin="normal"
-                  variant="outlined"
                 />
               </div>
               <div className="form-item-stars">

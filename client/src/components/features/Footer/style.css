@@ -1,13 +1,14 @@
 .footer {
     z-index: 9;
-  
     display: flex;
   justify-content: center;
-    background:grey;
-    height: 40vh;
+    background:#67727e;
+    height: 60px;
     width: 100vw;
-   
+    padding-top:20px;
+    color:#fff;
 };
+
 
 h1{
     padding: .25rem;
@@ -16,12 +17,12 @@ h1{
     
 };
 
-img, .githubIcon {
-  
+.githubIcon {
+  height:25px;
+  width:25px;
    margin: .25rem;
    padding: .25rem;
-
-    
-   
-
+}
+.copyright{
+  font-size:.8em;
 }

@@ -34,7 +34,7 @@ class MarketPlace extends React.Component {
     return (
       <div className="marketplace">
         {this.state.showSnippet ? (
-          <MarketPlaceSnippet
+          <MarketPlaceSnippet 
             handleChange={this.handleChange}
             toggleSnippet={this.toogleSnippet}
             title={this.props.title}

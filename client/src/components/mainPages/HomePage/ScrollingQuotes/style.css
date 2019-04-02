@@ -1,22 +1,86 @@
 .scrolling-quotes h3 {
   color: black;
-  font-size: 32px;
+  font-size: 40px;
   text-align: center;
-  padding: 300px 100px 0 100px;
+  /* padding: 300px 100px 0 100px; */
   font-family: 'Indie Flower', cursive;
 }
 
 .scrolling-quotes {
-  width: 49vw;
+  /* width: 49vw; */
+  padding:20%;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
-.scrolling-quotes-container {
+/* .scrolling-quotes-container {
   position: absolute;
   top: 10%;
   width: 100vw;
   display: flex;
   justify-content: center;
+} */
+
+.bob{
+  position:relative;
+  top:-25vh;
+  height:0px;
 }
+
+/* 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .bob{
+    top:-27vh;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 899.98px) {
+  .bob{
+    top:-28vh;
+  }
+}
+
+  @media (min-width: 900px) and (max-width:1024.98px) {
+    .bob{
+      top:-32vh;
+    }
+  }
+
+    @media (min-width: 1025px) and (max-width:1114.98px) {
+      .bob{
+        top:-35vh;
+      }
+
+}
+
+@media (min-width: 1115px) and (max-width:1249.98px) {
+  .bob{
+    top:-35vh;
+  }
+
+}
+
+@media (min-width: 1250px) {
+  .bob{
+    top:-40vh;
+  }
+  .scrolling-quotes h3 {
+    font-size: 40px;
+  }
+
+}
+
+@media (min-width: 1600px) {
+  .bob{
+    top:-47vh;
+  }
+
+  .scrolling-quotes h3 {
+  font-size: 40px;
+}
+
+} */
+
+

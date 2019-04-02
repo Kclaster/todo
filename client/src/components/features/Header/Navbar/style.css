@@ -1,9 +1,9 @@
 .nav-container {
-  display: flex;
-  position: absolute;
-  right: 0;
-  height: 100%;
-  align-items: flex-end;
+  /* display: flex; */
+  /* position: absolute; */
+  /* right: 0; */
+  /* height: 100%; */
+  /* align-items: flex-end; */
 }
 
 .link {

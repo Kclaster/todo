@@ -1,9 +1,10 @@
 .market-snippet-container {
-  border: 1px solid black;
+  /* border: 1px solid #67727e; */
   width: 80%;
   text-align: center;
   margin-bottom: 15px;
   font-family: 'Roboto', sans-serif;
+  margin-right: 20px;
 
   
 }
@@ -22,3 +23,17 @@
 .p{
  padding: 5px;
 }
+.contentContain{
+  margin-left: 45px;
+}
+
+.expiration{
+  margin-right: 8px;
+}
+
+.bid{
+  margin-left: 20px;
+}
+
+
+
