@@ -59,9 +59,16 @@ VALUE('Bob', 'Please mow my front lawn', 'Mow Lawn', 20, 2, 'April 10'),
 ('Richard', 'Sweep up peanuts from the stadium', 'Floor sweeping', 35, 2,'April 10'),
 ('Richard', 'Hang up promotional flyers', 'Marketing', 10, 1,'April 10'),
 ('Barbara', 'Need help building a ramp', 'Woodworking', 25, 4,'April 10'),
-('Barbara', 'Pack up my kitchen', 'Moving boxes', 15, 2,'April 10');
-
-
+('Barbara', 'Pack up my kitchen', 'Moving boxes', 15, 2,'April 10'),
+('Stephanie', 'Assistance needed painting a fence', 'Fence painting', 20, 3, 'April 10'),
+('David', 'Need someone to grind levels in my WOW account', 'Level me up', 22, 3,'April 10'),
+('David', 'Mop floors of my dining room, dust windows', 'Cleaning', 30, 4,'April 10'),
+('Cassandra', 'babsitter from 3-6pm, pls have cpr cert', 'babysit my 11 year old', 30, 5,'April 10'),
+('Cassandra', 'Help me haul some odds and ends to the dump', 'Truck needed', 20, 1,'April 10');
+('Tim', 'Clean the gutters of my house', 'Gutter cleaning', 15, 3, 'April 10'),
+('Tim', 'Organize my bookshelf', 'Clean up some books', 10, 2,'April 10'),
+('Bruce', 'Need a driver to airport', 'Chauffer', 25, 3,'April 10'),
+('Talia', 'Deep cleaning of carpet', 'Carpet deep cleaner', 40, 2,'April 10');
 
 
 CREATE TABLE `market` (
