@@ -27,6 +27,7 @@ class ToDoList extends React.Component {
   };
 
   componentDidMount() {
+    console.log('todolist props.userID', this.props.userId);
     axios.get(`/todos/123/${this.props.userId}`).then(response => {
       this.setState(
         {
@@ -41,7 +42,7 @@ class ToDoList extends React.Component {
     const list = [...this.state.todos, ...this.props.todo];
     return (
       <div className="list-container">
-      <h2>Task</h2>
+        <h2>Task</h2>
         {list !== 0 &&
           list.map(cur => {
             return (

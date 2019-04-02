@@ -80,7 +80,7 @@ class MarketPlaceSnippet extends React.Component {
                     </div>
                     <div className="bid">
                       <p>
-                        Current Bid:{' '}
+                        Current Bid:
                         {this.state.newBestBid
                           ? this.state.newBestBid
                           : this.props.startingBid}
@@ -88,9 +88,7 @@ class MarketPlaceSnippet extends React.Component {
                     </div>
                   </div>
                   <form onSubmit={e => this.handleSubmit(e)}>
-
                     <Input
-
                       placeholder="Your Bid"
                       onChange={e => this.handleChange(e)}
                       value={this.state.newBid}
@@ -104,18 +102,15 @@ class MarketPlaceSnippet extends React.Component {
                       type="text"
                       placeholder="Your Bid"
                     /> */}
-                    <Button
-                      variant="contained"
-                      type="submit"
-                    >
+                    <Button variant="contained" type="submit">
                       Submit Bid
-        </Button>
+                    </Button>
                     {/* <button type="submit">Submit Bid</button> */}
                   </form>
                 </Typography>
               </ExpansionPanelDetails>
             </div>
-          </ExpansionPanelSummary >
+          </ExpansionPanelSummary>
         </Card>
       </div>
     );
