@@ -1,10 +1,12 @@
 .footer {
   z-index: 9;
   display: flex;
+  position: absolute;
+  bottom: 0%;
   justify-content: center;
   background: #67727e;
   height: 60px;
-  width: 100vw;
+  width: 100%;
   padding-top: 20px;
   color: #fff;
 }
@@ -23,4 +25,9 @@ h1 {
 }
 .copyright {
   font-size: 0.8em;
+  color:#fff;
+}
+
+.copyright a{
+  color:#fff;
 }
