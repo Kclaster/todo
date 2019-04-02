@@ -17,11 +17,9 @@ const Footer = (props) => {
   const { classes } = props;
     return (
       <div className="footer">
-      <div>
-        <img className={classes.height} src={coolpic} alt="icon"/></div>
-        <p className="copyright">&nbsp;© 2019 TaskBidder - The Dream Team </p>
+        <p className="copyright"><a href="https://github.com/Kclaster/todo/" target="_blank"><i class="fa fa-code" aria-hidden="true"></i> Repo</a>&nbsp;&nbsp;|&nbsp;&nbsp;© 2019 TaskBidder</p>
       </div>
-    );
+    ); 
   }
 
 export default withStyles(styles)(Footer);
