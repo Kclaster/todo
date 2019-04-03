@@ -21,7 +21,6 @@ class ReviewLink extends React.Component {
 
   handleChange(event) {
     const target = event.target.value;
-    const name = this.state.name + target;
     this.setState({
       name: target
     });
@@ -38,8 +37,12 @@ class ReviewLink extends React.Component {
 
     axios
       .post('/user/reviews', post)
-      .then(res => { })
-      .catch(err => { });
+      .then(res => {})
+      .catch(err => {});
+    this.setState({
+      name: '',
+      stars: null
+    });
   }
 
   handleStarChange = stars => {
@@ -57,7 +60,7 @@ class ReviewLink extends React.Component {
             multiline
             rows="6"
             rowsMax="10"
-            value={this.state.value}
+            value={this.state.name}
             onChange={this.handleChange}
             margin="normal"
             fullWidth
@@ -75,10 +78,10 @@ class ReviewLink extends React.Component {
             onClick={this.handleSubmit}
             className="submit-btn"
             type="submit"
-            value="" 
+            value=""
           >
             Submit
-            </Button>
+          </Button>
         </form>
       </div>
     );
