@@ -1,9 +1,9 @@
 .sidebar-container {
-  height: 100vh;
+  height: 80vh;
   width: 40vw;
   position: fixed;
   right: 0;
-  top: 100px;
+  top: 20vh;
   background: #67727e;
   transition: transform 1s;
   text-align: center;
