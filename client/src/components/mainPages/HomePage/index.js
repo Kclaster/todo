@@ -7,7 +7,7 @@ import ScrollingQuotes from './ScrollingQuotes';
 import { setHeight } from '../../../redux/actions';
 import { connect } from 'react-redux';
 import pic from '../../../pictures/agenda-blank-checklist-3299.jpg';
-import pic2 from '../../../pictures/scrolling3.jpg';
+import pic2 from '../../../pictures/feature.jpg';
 import './style.css';
 
 class HomePage extends React.Component {
@@ -77,7 +77,7 @@ class HomePage extends React.Component {
           </div>
         </div>
         <div className="footerHome">
-        <Footer />
+          <Footer />
         </div>
       </div>
     );
