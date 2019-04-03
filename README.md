@@ -7,13 +7,13 @@ How much is your time worth? You are busy, time is in short supply. Whether it's
 ### Home Page
 Once you reach the TaskBidder website, you will be greeted with the home page. Simple log in with Google to begin using TaskBidder. Once you have logged in you, the site will redirect you to the User Page. 
 
-![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/logo-01.png)
+![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/TaskBidder%20Home.png)
 
 
 ### User Page
 The User Page is the portal to the user's task, the market place, creating a tas and writing a review. 
 
-![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/logo-01.png)
+![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/TaskBidder%20User.png)
 
 
 #### Your Task
@@ -31,19 +31,18 @@ Creating a task is simple! On the right-hand side of the page, you will see the 
 #### Creating a Task for the Market Place
 Adding a task to the Market Place. On the right-hand side of the page, you will see the sidebar label Create a Task. Add a title, description, starting bid price, add the minimum stars need for a user to bid, after that click the button "Add to the Market."  Users can now bid to win your task. After seven days the user with the lowest bid wins the task.
 
-![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/logo-01.png)
+![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/add%20to%20the%20marketplace.gif)
 
 #### Market Place Task
 Click on the title of the task, and it will expand to show all the details.  You will see a description of the task when the task expires, the current bid and the area where the user can submit their bid. When a user's bids on a task the current bid will update automatically. Click on the title of the task to close that task and view others. 
 
-![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/MarketPlace.gif)
 ![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/Bidding.gif)
 
 
 #### Writing a Review
 At the bottom right side of the user page, you will find the review section. Once another user has completed your task from the market place, a review will be sent for you to fill out. Remember the reviews determine how a user can bid on a task. 
 
-![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/logo-01.png)
+![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/Review.gif)
 
 
 ## Languages & FrameWorks Used
