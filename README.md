@@ -19,13 +19,13 @@ The User Page is the portal to the user's task, the market place, creating a tas
 #### Your Task
 Your task will be on the list on the left-hand side of the page. This will allow you to view your task and mark them complete.
 
-![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/logo-01.png)
+![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/Task-section.gif)
 
 
 #### Creating a Task
 Creating a task is simple! On the right-hand side of the page, you will see the sidebar label Create a Task. Fill out the appropriate fields and click "Add to my Task." You will see it appear in your task list. 
 
-![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/logo-01.png)
+![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/create-task.gif)
 
 
 #### Creating a Task for the Market Place
@@ -36,7 +36,8 @@ Adding a task to the Market Place. On the right-hand side of the page, you will 
 #### Market Place Task
 Click on the title of the task, and it will expand to show all the details.  You will see a description of the task when the task expires, the current bid and the area where the user can submit their bid. When a user's bids on a task the current bid will update automatically. Click on the title of the task to close that task and view others. 
 
-![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/logo-01.png)
+![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/MarketPlace.gif)
+![Alt Text](https://github.com/Kclaster/todo/blob/master/client/src/pictures/Bidding.gif)
 
 
 #### Writing a Review
