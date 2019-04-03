@@ -16,12 +16,12 @@ class ReviewContainer extends React.Component {
 
     this.aboutContent1 = {
       header: 'Why TaskBidder',
-      text: "How much is your time really worth? For many Americans, time is in short supply. Whether it's balancing between your busy work schedual, or full social life or simply watching after a family, it can get tough to check off every chore on your to do list. TaskBidder allows for you to put those pesky time consuming chores up for sale, and allows other to become the extra hands you need! You have tasks that needs to get done and there are people willing to do them",
+      text: "How much is your time worth? You are busy, time is in short supply. Whether it's balancing between your busy work schedule, or full social life or merely watching after a family, it can get tough to check off every chore on your to-do list. TaskBidder allows for you to put those pesky time-consuming chores up for sale, and allows others to become the extra hands you need! You have tasks that need to get done, and people are willing to do them.",
     }
 
     this.aboutContent2 = {
       header: 'How to use TaskBidder',
-      text: 'TaskBidder is simple to use! Simply create a task with a fair starting bid and send it off to our marketplace. Other users will bid for your task! At the end, you both leave reviews about each other and the quality of work done, which helps users build positive ratings, and allows everyone to maintain a great evironment',
+      text: 'TaskBidder is simple to use! Simply create a task with a fair starting bid and send it off to our marketplace. Other users will bid for your task! In the end, you both leave reviews about each other and the quality of work done, which helps users build positive ratings, and allows everyone to maintain a great environment.',
     }
   }
 

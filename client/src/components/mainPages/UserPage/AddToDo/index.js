@@ -156,7 +156,7 @@ class AddToDo extends React.Component {
                 type="submit"
                 value="Add to My Todos"
               >
-                Add to My Todos
+                Add to My Task
             </Button>
               <Button
                 variant="contained"
