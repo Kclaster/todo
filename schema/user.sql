@@ -98,6 +98,15 @@ VALUE('Bob', '17', 'talia', 'April 10, 2019', 'Please mow my front lawn', 'Mow L
 ('Richard','22', 'Tim', 'April 10, 2019', 'Sweep up peanuts from the stadium', 'Floor sweeping', 2),
 
 
+CREATE TABLE `reviews` (
+  `id` int(40) NOT NULL AUTO_INCREMENT,
+  `userId` varchar(60) NOT NULL,
+  `review` varchar(300) NOT NULL,
+  `stars` int(5) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+
 
 --     INSERT INTO `users`.`market`
 -- (

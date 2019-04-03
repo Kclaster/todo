@@ -1,6 +1,6 @@
 .burger-container {
   position: fixed;
-  top: 110px;
+  top: 24vh;
   right: 2vw;
   z-index: 400;
 }
@@ -31,7 +31,7 @@
 
 .ex-container {
   position: fixed;
-  top: 110px;
+  top: 24vh;
   right: 2vw;
   z-index: 100;
 }
